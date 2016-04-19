@@ -44,7 +44,6 @@
 		BE2D3C4B1CC54246002DEB94 /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C401CC54246002DEB94 /* SLKInputAccessoryView.m */; };
 		BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */; };
 		BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */; };
-		BE2D3C521CC5436B002DEB94 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C511CC5436B002DEB94 /* OnBoardViewController.swift */; };
 		BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59D1CC54EBC00917037 /* Configuration.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -104,7 +103,6 @@
 		BE2D3C411CC54246002DEB94 /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
 		BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
-		BE2D3C511CC5436B002DEB94 /* OnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
 		BE33A59D1CC54EBC00917037 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,7 +162,6 @@
 			children = (
 				BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */,
 				BE33A59D1CC54EBC00917037 /* Configuration.swift */,
-				BE2D3C291CC541CD002DEB94 /* OnBoard */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
 				BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */,
 				BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */,
@@ -200,14 +197,6 @@
 				BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */,
 			);
 			name = SocketIO;
-			sourceTree = "<group>";
-		};
-		BE2D3C291CC541CD002DEB94 /* OnBoard */ = {
-			isa = PBXGroup;
-			children = (
-				BE2D3C511CC5436B002DEB94 /* OnBoardViewController.swift */,
-			);
-			name = OnBoard;
 			sourceTree = "<group>";
 		};
 		BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */ = {
@@ -284,6 +273,11 @@
 					BE2D3BEC1CC5396C002DEB94 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = QHQL7836SK;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -391,7 +385,6 @@
 				BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */,
 				BE2D3C1A1CC53B91002DEB94 /* SocketParser.swift in Sources */,
 				BE2D3C181CC53B91002DEB94 /* SocketTypes.swift in Sources */,
-				BE2D3C521CC5436B002DEB94 /* OnBoardViewController.swift in Sources */,
 				BE2D3C241CC53B91002DEB94 /* SocketEngineClient.swift in Sources */,
 				BE2D3C451CC54246002DEB94 /* SLKTypingIndicatorView.m in Sources */,
 				BE2D3C1C1CC53B91002DEB94 /* SocketLogger.swift in Sources */,
@@ -530,7 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5c4b3ae8-09fb-4834-a198-5c3a078acc01";
+				PROVISIONING_PROFILE = "8eba99a9-77a5-4448-aaec-728f68a7e4df";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -549,7 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c2eb94c6-b4e2-4ad8-866f-7d729a471aef";
+				PROVISIONING_PROFILE = "747ed2cb-8553-4a27-a811-2251ec091d77";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 			};
 			name = Release;
