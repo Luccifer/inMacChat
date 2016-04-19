@@ -7,21 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CE5BDC8BEE87195E73E32FE /* Pods_inMacChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */; };
 		BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */; };
-		BE2D3BF31CC5396C002DEB94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3BF21CC5396C002DEB94 /* ViewController.swift */; };
+		BE2D3BF31CC5396C002DEB94 /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */; };
 		BE2D3BF61CC5396C002DEB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D3BF41CC5396C002DEB94 /* Main.storyboard */; };
 		BE2D3BF81CC5396C002DEB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */; };
 		BE2D3BFB1CC5396C002DEB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D3BF91CC5396C002DEB94 /* LaunchScreen.storyboard */; };
+		BE2D3C161CC53B91002DEB94 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C031CC53B91002DEB94 /* WebSocket.swift */; };
+		BE2D3C171CC53B91002DEB94 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C041CC53B91002DEB94 /* SwiftRegex.swift */; };
+		BE2D3C181CC53B91002DEB94 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C051CC53B91002DEB94 /* SocketTypes.swift */; };
+		BE2D3C191CC53B91002DEB94 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C061CC53B91002DEB94 /* SocketStringReader.swift */; };
+		BE2D3C1A1CC53B91002DEB94 /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C071CC53B91002DEB94 /* SocketParser.swift */; };
+		BE2D3C1B1CC53B91002DEB94 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C081CC53B91002DEB94 /* SocketPacket.swift */; };
+		BE2D3C1C1CC53B91002DEB94 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C091CC53B91002DEB94 /* SocketLogger.swift */; };
+		BE2D3C1D1CC53B91002DEB94 /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0A1CC53B91002DEB94 /* SocketIOClientStatus.swift */; };
+		BE2D3C1E1CC53B91002DEB94 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0B1CC53B91002DEB94 /* SocketIOClientOption.swift */; };
+		BE2D3C1F1CC53B91002DEB94 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0C1CC53B91002DEB94 /* SocketIOClient.swift */; };
+		BE2D3C201CC53B91002DEB94 /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0D1CC53B91002DEB94 /* SocketFixUTF8.swift */; };
+		BE2D3C211CC53B91002DEB94 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0E1CC53B91002DEB94 /* SocketEventHandler.swift */; };
+		BE2D3C221CC53B91002DEB94 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0F1CC53B91002DEB94 /* SocketEngineSpec.swift */; };
+		BE2D3C231CC53B91002DEB94 /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C101CC53B91002DEB94 /* SocketEnginePacketType.swift */; };
+		BE2D3C241CC53B91002DEB94 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C111CC53B91002DEB94 /* SocketEngineClient.swift */; };
+		BE2D3C251CC53B91002DEB94 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C121CC53B91002DEB94 /* SocketEngine.swift */; };
+		BE2D3C261CC53B91002DEB94 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C131CC53B91002DEB94 /* SocketAnyEvent.swift */; };
+		BE2D3C271CC53B91002DEB94 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C141CC53B91002DEB94 /* SocketAckManager.swift */; };
+		BE2D3C281CC53B91002DEB94 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */; };
+		BE2D3C421CC54246002DEB94 /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C2C1CC54246002DEB94 /* UIView+SLKAdditions.m */; };
+		BE2D3C431CC54246002DEB94 /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C2E1CC54246002DEB94 /* UIScrollView+SLKAdditions.m */; };
+		BE2D3C441CC54246002DEB94 /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C301CC54246002DEB94 /* UIResponder+SLKAdditions.m */; };
+		BE2D3C451CC54246002DEB94 /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C331CC54246002DEB94 /* SLKTypingIndicatorView.m */; };
+		BE2D3C461CC54246002DEB94 /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C361CC54246002DEB94 /* SLKTextViewController.m */; };
+		BE2D3C471CC54246002DEB94 /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C381CC54246002DEB94 /* SLKTextView+SLKAdditions.m */; };
+		BE2D3C481CC54246002DEB94 /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C3A1CC54246002DEB94 /* SLKTextView.m */; };
+		BE2D3C491CC54246002DEB94 /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C3C1CC54246002DEB94 /* SLKTextInputbar.m */; };
+		BE2D3C4A1CC54246002DEB94 /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C3E1CC54246002DEB94 /* SLKTextInput+Implementation.m */; };
+		BE2D3C4B1CC54246002DEB94 /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C401CC54246002DEB94 /* SLKInputAccessoryView.m */; };
+		BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */; };
+		BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */; };
+		BE2D3C521CC5436B002DEB94 /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C511CC5436B002DEB94 /* OnBoardViewController.swift */; };
+		BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59D1CC54EBC00917037 /* Configuration.swift */; };
+		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inMacChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F3F48EA804465DAD4A47BF /* Pods-inMacChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inMacChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat.release.xcconfig"; sourceTree = "<group>"; };
+		BE26B345A36C61CCA2BF9738 /* Pods-inMacChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inMacChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat.debug.xcconfig"; sourceTree = "<group>"; };
 		BE2D3BED1CC5396C002DEB94 /* inMacChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inMacChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE2D3BF21CC5396C002DEB94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		BE2D3BF51CC5396C002DEB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2D3BFA1CC5396C002DEB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE2D3BFC1CC5396C002DEB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2D3C031CC53B91002DEB94 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		BE2D3C041CC53B91002DEB94 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		BE2D3C051CC53B91002DEB94 /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
+		BE2D3C061CC53B91002DEB94 /* SocketStringReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketStringReader.swift; sourceTree = "<group>"; };
+		BE2D3C071CC53B91002DEB94 /* SocketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketParser.swift; sourceTree = "<group>"; };
+		BE2D3C081CC53B91002DEB94 /* SocketPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketPacket.swift; sourceTree = "<group>"; };
+		BE2D3C091CC53B91002DEB94 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
+		BE2D3C0A1CC53B91002DEB94 /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientStatus.swift; sourceTree = "<group>"; };
+		BE2D3C0B1CC53B91002DEB94 /* SocketIOClientOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientOption.swift; sourceTree = "<group>"; };
+		BE2D3C0C1CC53B91002DEB94 /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		BE2D3C0D1CC53B91002DEB94 /* SocketFixUTF8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFixUTF8.swift; sourceTree = "<group>"; };
+		BE2D3C0E1CC53B91002DEB94 /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		BE2D3C0F1CC53B91002DEB94 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineSpec.swift; sourceTree = "<group>"; };
+		BE2D3C101CC53B91002DEB94 /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEnginePacketType.swift; sourceTree = "<group>"; };
+		BE2D3C111CC53B91002DEB94 /* SocketEngineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineClient.swift; sourceTree = "<group>"; };
+		BE2D3C121CC53B91002DEB94 /* SocketEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngine.swift; sourceTree = "<group>"; };
+		BE2D3C131CC53B91002DEB94 /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
+		BE2D3C141CC53B91002DEB94 /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
+		BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
+		BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "inMacChat-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		BE2D3C2C1CC54246002DEB94 /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE2D3C2D1CC54246002DEB94 /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE2D3C2E1CC54246002DEB94 /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE2D3C2F1CC54246002DEB94 /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE2D3C301CC54246002DEB94 /* UIResponder+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE2D3C311CC54246002DEB94 /* UIResponder+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE2D3C321CC54246002DEB94 /* SLKUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKUIConstants.h; sourceTree = "<group>"; };
+		BE2D3C331CC54246002DEB94 /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTypingIndicatorView.m; sourceTree = "<group>"; };
+		BE2D3C341CC54246002DEB94 /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorView.h; sourceTree = "<group>"; };
+		BE2D3C351CC54246002DEB94 /* SLKTypingIndicatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorProtocol.h; sourceTree = "<group>"; };
+		BE2D3C361CC54246002DEB94 /* SLKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextViewController.m; sourceTree = "<group>"; };
+		BE2D3C371CC54246002DEB94 /* SLKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextViewController.h; sourceTree = "<group>"; };
+		BE2D3C381CC54246002DEB94 /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE2D3C391CC54246002DEB94 /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE2D3C3A1CC54246002DEB94 /* SLKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextView.m; sourceTree = "<group>"; };
+		BE2D3C3B1CC54246002DEB94 /* SLKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextView.h; sourceTree = "<group>"; };
+		BE2D3C3C1CC54246002DEB94 /* SLKTextInputbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextInputbar.m; sourceTree = "<group>"; };
+		BE2D3C3D1CC54246002DEB94 /* SLKTextInputbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInputbar.h; sourceTree = "<group>"; };
+		BE2D3C3E1CC54246002DEB94 /* SLKTextInput+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextInput+Implementation.m"; sourceTree = "<group>"; };
+		BE2D3C3F1CC54246002DEB94 /* SLKTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInput.h; sourceTree = "<group>"; };
+		BE2D3C401CC54246002DEB94 /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
+		BE2D3C411CC54246002DEB94 /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
+		BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		BE2D3C511CC5436B002DEB94 /* OnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
+		BE33A59D1CC54EBC00917037 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +114,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE5BDC8BEE87195E73E32FE /* Pods_inMacChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A6E61E8B3F1C117C7A009A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE26B345A36C61CCA2BF9738 /* Pods-inMacChat.debug.xcconfig */,
+				B0F3F48EA804465DAD4A47BF /* Pods-inMacChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4FD9B524FE051EF3661CE8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3C4C1CC54290002DEB94 /* FloatLabel */,
+				BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */,
+				BE2D3C021CC53B72002DEB94 /* SocketIO */,
+				910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE2D3BE41CC5396C002DEB94 = {
 			isa = PBXGroup;
 			children = (
 				BE2D3BEF1CC5396C002DEB94 /* inMacChat */,
 				BE2D3BEE1CC5396C002DEB94 /* Products */,
+				06A6E61E8B3F1C117C7A009A /* Pods */,
+				B4FD9B524FE051EF3661CE8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +162,90 @@
 		BE2D3BEF1CC5396C002DEB94 /* inMacChat */ = {
 			isa = PBXGroup;
 			children = (
+				BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */,
+				BE33A59D1CC54EBC00917037 /* Configuration.swift */,
+				BE2D3C291CC541CD002DEB94 /* OnBoard */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
-				BE2D3BF21CC5396C002DEB94 /* ViewController.swift */,
+				BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */,
+				BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */,
 				BE2D3BF41CC5396C002DEB94 /* Main.storyboard */,
 				BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */,
 				BE2D3BF91CC5396C002DEB94 /* LaunchScreen.storyboard */,
 				BE2D3BFC1CC5396C002DEB94 /* Info.plist */,
 			);
 			path = inMacChat;
+			sourceTree = "<group>";
+		};
+		BE2D3C021CC53B72002DEB94 /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3C031CC53B91002DEB94 /* WebSocket.swift */,
+				BE2D3C041CC53B91002DEB94 /* SwiftRegex.swift */,
+				BE2D3C051CC53B91002DEB94 /* SocketTypes.swift */,
+				BE2D3C061CC53B91002DEB94 /* SocketStringReader.swift */,
+				BE2D3C071CC53B91002DEB94 /* SocketParser.swift */,
+				BE2D3C081CC53B91002DEB94 /* SocketPacket.swift */,
+				BE2D3C091CC53B91002DEB94 /* SocketLogger.swift */,
+				BE2D3C0A1CC53B91002DEB94 /* SocketIOClientStatus.swift */,
+				BE2D3C0B1CC53B91002DEB94 /* SocketIOClientOption.swift */,
+				BE2D3C0C1CC53B91002DEB94 /* SocketIOClient.swift */,
+				BE2D3C0D1CC53B91002DEB94 /* SocketFixUTF8.swift */,
+				BE2D3C0E1CC53B91002DEB94 /* SocketEventHandler.swift */,
+				BE2D3C0F1CC53B91002DEB94 /* SocketEngineSpec.swift */,
+				BE2D3C101CC53B91002DEB94 /* SocketEnginePacketType.swift */,
+				BE2D3C111CC53B91002DEB94 /* SocketEngineClient.swift */,
+				BE2D3C121CC53B91002DEB94 /* SocketEngine.swift */,
+				BE2D3C131CC53B91002DEB94 /* SocketAnyEvent.swift */,
+				BE2D3C141CC53B91002DEB94 /* SocketAckManager.swift */,
+				BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */,
+			);
+			name = SocketIO;
+			sourceTree = "<group>";
+		};
+		BE2D3C291CC541CD002DEB94 /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3C511CC5436B002DEB94 /* OnBoardViewController.swift */,
+			);
+			name = OnBoard;
+			sourceTree = "<group>";
+		};
+		BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3C2C1CC54246002DEB94 /* UIView+SLKAdditions.m */,
+				BE2D3C2D1CC54246002DEB94 /* UIView+SLKAdditions.h */,
+				BE2D3C2E1CC54246002DEB94 /* UIScrollView+SLKAdditions.m */,
+				BE2D3C2F1CC54246002DEB94 /* UIScrollView+SLKAdditions.h */,
+				BE2D3C301CC54246002DEB94 /* UIResponder+SLKAdditions.m */,
+				BE2D3C311CC54246002DEB94 /* UIResponder+SLKAdditions.h */,
+				BE2D3C321CC54246002DEB94 /* SLKUIConstants.h */,
+				BE2D3C331CC54246002DEB94 /* SLKTypingIndicatorView.m */,
+				BE2D3C341CC54246002DEB94 /* SLKTypingIndicatorView.h */,
+				BE2D3C351CC54246002DEB94 /* SLKTypingIndicatorProtocol.h */,
+				BE2D3C361CC54246002DEB94 /* SLKTextViewController.m */,
+				BE2D3C371CC54246002DEB94 /* SLKTextViewController.h */,
+				BE2D3C381CC54246002DEB94 /* SLKTextView+SLKAdditions.m */,
+				BE2D3C391CC54246002DEB94 /* SLKTextView+SLKAdditions.h */,
+				BE2D3C3A1CC54246002DEB94 /* SLKTextView.m */,
+				BE2D3C3B1CC54246002DEB94 /* SLKTextView.h */,
+				BE2D3C3C1CC54246002DEB94 /* SLKTextInputbar.m */,
+				BE2D3C3D1CC54246002DEB94 /* SLKTextInputbar.h */,
+				BE2D3C3E1CC54246002DEB94 /* SLKTextInput+Implementation.m */,
+				BE2D3C3F1CC54246002DEB94 /* SLKTextInput.h */,
+				BE2D3C401CC54246002DEB94 /* SLKInputAccessoryView.m */,
+				BE2D3C411CC54246002DEB94 /* SLKInputAccessoryView.h */,
+			);
+			name = SlacktextViewController;
+			sourceTree = "<group>";
+		};
+		BE2D3C4C1CC54290002DEB94 /* FloatLabel */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */,
+				BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */,
+			);
+			name = FloatLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE2D3BFF1CC5396C002DEB94 /* Build configuration list for PBXNativeTarget "inMacChat" */;
 			buildPhases = (
+				1581AE4CF50E2CC6BE0CBF4A /* 📦 Check Pods Manifest.lock */,
 				BE2D3BE91CC5396C002DEB94 /* Sources */,
 				BE2D3BEA1CC5396C002DEB94 /* Frameworks */,
 				BE2D3BEB1CC5396C002DEB94 /* Resources */,
+				BF1E7CEA88025EF9D09571B2 /* 📦 Embed Pods Frameworks */,
+				234E9398E5FEBCB122A36AEE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +318,95 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1581AE4CF50E2CC6BE0CBF4A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		234E9398E5FEBCB122A36AEE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF1E7CEA88025EF9D09571B2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE2D3BE91CC5396C002DEB94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE2D3BF31CC5396C002DEB94 /* ViewController.swift in Sources */,
+				BE2D3C231CC53B91002DEB94 /* SocketEnginePacketType.swift in Sources */,
+				BE2D3C4B1CC54246002DEB94 /* SLKInputAccessoryView.m in Sources */,
+				BE2D3C441CC54246002DEB94 /* UIResponder+SLKAdditions.m in Sources */,
+				BE2D3C4A1CC54246002DEB94 /* SLKTextInput+Implementation.m in Sources */,
+				BE2D3C491CC54246002DEB94 /* SLKTextInputbar.m in Sources */,
+				BE2D3C191CC53B91002DEB94 /* SocketStringReader.swift in Sources */,
+				BE2D3C1D1CC53B91002DEB94 /* SocketIOClientStatus.swift in Sources */,
+				BE2D3BF31CC5396C002DEB94 /* NickNameViewController.swift in Sources */,
+				BE2D3C221CC53B91002DEB94 /* SocketEngineSpec.swift in Sources */,
+				BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */,
+				BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */,
+				BE2D3C1F1CC53B91002DEB94 /* SocketIOClient.swift in Sources */,
+				BE2D3C251CC53B91002DEB94 /* SocketEngine.swift in Sources */,
+				BE2D3C261CC53B91002DEB94 /* SocketAnyEvent.swift in Sources */,
+				BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */,
+				BE2D3C211CC53B91002DEB94 /* SocketEventHandler.swift in Sources */,
+				BE2D3C161CC53B91002DEB94 /* WebSocket.swift in Sources */,
+				BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */,
+				BE2D3C1A1CC53B91002DEB94 /* SocketParser.swift in Sources */,
+				BE2D3C181CC53B91002DEB94 /* SocketTypes.swift in Sources */,
+				BE2D3C521CC5436B002DEB94 /* OnBoardViewController.swift in Sources */,
+				BE2D3C241CC53B91002DEB94 /* SocketEngineClient.swift in Sources */,
+				BE2D3C451CC54246002DEB94 /* SLKTypingIndicatorView.m in Sources */,
+				BE2D3C1C1CC53B91002DEB94 /* SocketLogger.swift in Sources */,
+				BE2D3C461CC54246002DEB94 /* SLKTextViewController.m in Sources */,
+				BE2D3C471CC54246002DEB94 /* SLKTextView+SLKAdditions.m in Sources */,
+				BE2D3C481CC54246002DEB94 /* SLKTextView.m in Sources */,
+				BE2D3C201CC53B91002DEB94 /* SocketFixUTF8.swift in Sources */,
 				BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */,
+				BE2D3C271CC53B91002DEB94 /* SocketAckManager.swift in Sources */,
+				BE2D3C1B1CC53B91002DEB94 /* SocketPacket.swift in Sources */,
+				BE2D3C281CC53B91002DEB94 /* SocketAckEmitter.swift in Sources */,
+				BE2D3C431CC54246002DEB94 /* UIScrollView+SLKAdditions.m in Sources */,
+				BE2D3C171CC53B91002DEB94 /* SwiftRegex.swift in Sources */,
+				BE2D3C1E1CC53B91002DEB94 /* SocketIOClientOption.swift in Sources */,
+				BE2D3C421CC54246002DEB94 /* UIView+SLKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,29 +519,38 @@
 		};
 		BE2D3C001CC5396C002DEB94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE26B345A36C61CCA2BF9738 /* Pods-inMacChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gleb Karpushkin (JJ5D57T553)";
 				INFOPLIST_FILE = inMacChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c4b3ae8-09fb-4834-a198-5c3a078acc01";
+				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BE2D3C011CC5396C002DEB94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F3F48EA804465DAD4A47BF /* Pods-inMacChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gleb Karpushkin (QHQL7836SK)";
 				INFOPLIST_FILE = inMacChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c2eb94c6-b4e2-4ad8-866f-7d729a471aef";
+				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -295,6 +573,7 @@
 				BE2D3C011CC5396C002DEB94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
