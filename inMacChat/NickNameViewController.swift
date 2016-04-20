@@ -22,7 +22,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
     var timer = NSTimer()
     var trigger: Bool = false
-    
+
     var nickFiled = FloatLabelTextField()
     var nextButton = UIButton()
 
@@ -34,16 +34,14 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
+
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.checkFirstResponder), userInfo: nil, repeats: true)
-        
+
         if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed") == nil {
             self.coachMarksController.startOn(self)
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed")
         } else {
             if NSUserDefaults.standardUserDefaults().boolForKey("tutorShowed") == false {
                 self.coachMarksController.startOn(self)
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed")
             } else {
 
             }
@@ -142,7 +140,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
             switch(coachMarksForIndex) {
             case 0:
                 coachMark = coachMarksController.coachMarkForView(self.pointOfInterest)
-                
+
             case 1:
                 coachMark = coachMarksController.coachMarkForView(self.nickFiled)
                 coachMark.arrowOrientation = .Top
@@ -174,7 +172,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
                 coachViews.bodyView.hintLabel.text = "Type your login from inMac.org"
                 coachViews.bodyView.nextLabel.text = "Done"
                 self.nickFiled.becomeFirstResponder()
-                
+
             case 2:
                 coachViews.bodyView.hintLabel.text = "You are good to go!"
                 coachViews.bodyView.nextLabel.text = "Tnx!"
@@ -207,7 +205,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
     func checkFirstResponder() {
         if self.nickFiled.isFirstResponder() == true {
             self.trigger = true
-        }else{
+        } else {
             if self.trigger == true {
                 view.endEditing(true)
                 self.timer.invalidate()
@@ -215,7 +213,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
         }
 
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
