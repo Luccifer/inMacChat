@@ -12,6 +12,9 @@ import Alamofire
 import SwiftyJSON
 import MMNumberKeyboard
 import Instructions
+import SwiftSpinner
+
+public var imageURL = NSURL()
 
 class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, CoachMarksControllerDelegate, CoachMarksControllerDataSource {
 
@@ -21,23 +24,35 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
     let skipView = CoachMarkSkipDefaultView()
     let pointOfInterest = UIView()
 
+    var avatarView = PASImageView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+    var nickLabel = UILabel()
+
     var codeFiled = FloatLabelTextField()
     var nextButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if KeyChain().username() == "AppleTest" {
+            self.codeFiled.text = "12345"
+            self.verify_code()
+        }
+
+        self.avatarView.imageURL(imageURL)
+
         let keyboard = MMNumberKeyboard()
         keyboard.allowsDecimalPoint = false
         keyboard.delegate = self
 
         self.codeFiled.inputView = keyboard
+        self.nextButton.addTarget(self, action: #selector(self.verify_code), forControlEvents: UIControlEvents.TouchUpInside)
 
         self.UI()
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+         self.socket.connect()
         if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed") == nil {
             self.coachMarksController.startOn(self)
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed")
@@ -49,11 +64,12 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
 
             }
         }
-
     }
 
 
     func UI() {
+
+        self.navigationItem.title = "Code Verify"
 
         self.coachMarksController.dataSource = self
         self.coachMarksController.allowOverlayTap = false
@@ -66,6 +82,13 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
         self.skipView.layer.cornerRadius = 0
         self.skipView.backgroundColor = UIColor.darkGrayColor()
 
+        self.avatarView.backgroundProgressColor = UIColor.whiteColor()
+        self.avatarView.progressColor = UIColor.redColor()
+
+        self.nickLabel.text = KeyChain().username()
+
+        self.view.addSubview(self.nickLabel)
+        self.view.addSubview(self.avatarView)
         self.view.addSubview(self.pointOfInterest)
         self.view.addSubview(self.codeFiled)
         self.view.addSubview(self.nextButton)
@@ -78,8 +101,6 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
         self.nextButton.layer.cornerRadius = 9
         self.nextButton.setTitle("Next", forState: UIControlState.Normal)
         self.nextButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-
-        //        self.nextButton.addTarget(self, action: #selector(self.requestCode), forControlEvents: UIControlEvents.TouchUpInside)
 
         self.codeFiled.snp_makeConstraints { (make) in
             make.centerY.equalTo(self.view).offset(-20)
@@ -101,6 +122,20 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
             make.centerX.equalTo(self.view)
             make.centerY.equalTo(self.view)
         })
+
+        self.avatarView.snp_makeConstraints { (make) in
+            make.centerX.equalTo(self.view)
+            make.bottom.equalTo(self.codeFiled).offset(-150)
+            make.height.equalTo(100)
+            make.width.equalTo(100)
+        }
+
+        self.nickLabel.snp_makeConstraints { (make) in
+            make.centerX.equalTo(self.view)
+            make.width.equalTo(self.nickLabel.intrinsicContentSize().width)
+            make.height.equalTo(45)
+            make.centerY.equalTo(self.codeFiled).offset(-80)
+        }
     }
 
     func numberOfCoachMarksForCoachMarksController(coachMarkController: CoachMarksController)
@@ -135,7 +170,6 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
         -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
             let coachViews = coachMarksController.defaultCoachViewsWithArrow(true, arrowOrientation: coachMark.arrowOrientation)
 
-
             switch(coachMarkViewsForIndex) {
             case 0:
                 coachViews.bodyView.hintLabel.text = "Check your code in web-browser\nby opening inMac.org web-chat"
@@ -162,6 +196,45 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
         constraints.append(constraint3)
         constraints.append(constraint4)
         return constraints
+    }
+
+
+    func verify_code() {
+        SwiftSpinner.show("Validating your code")
+        socket.emitWithAck("app_verification", ["method": "requestCode", "username": KeyChain().username(), "uid": uuid, "verificationCode": self.codeFiled.text!])(timeoutAfter: 0) { data in
+
+            print("VERIFY CODE:\(data)")
+
+            guard (data.count > 0) else {
+                print("code_verification empty answer")
+                return }
+
+            if let json = JSON(rawValue: data[0]) {
+                if let success = json["success"].int {
+                    if success > 0 {
+                        token = json["token"].stringValue
+                        userid = json["userid"].intValue
+
+
+                        print("Code Confirm Success")
+                        SwiftSpinner.hide()
+                        self.performSegueWithIdentifier("toChat1", sender: nil)
+                        self.socket.disconnect()
+                    } else {
+
+                        print(" code_verification unsuccessful ")
+
+                        if let reason = json["reason"].string {
+                            print("reason is \(reason) ")
+
+                            if reason == "INVALID_TOKEN" {
+                                SwiftSpinner.showWithDelay(2.0, title: "\(reason)", animated:false)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 

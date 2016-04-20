@@ -11,6 +11,7 @@ import SnapKit
 import SwiftyJSON
 import SCLAlertView
 import Instructions
+import SwiftSpinner
 
 class NickNameViewController: UIViewController, CoachMarksControllerDelegate, CoachMarksControllerDataSource {
 
@@ -28,20 +29,22 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.UI()
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-
+        self.socket.connect()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.checkFirstResponder), userInfo: nil, repeats: true)
 
-        if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed") == nil {
+        if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed1") == nil {
             self.coachMarksController.startOn(self)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed1")
         } else {
-            if NSUserDefaults.standardUserDefaults().boolForKey("tutorShowed") == false {
+            if NSUserDefaults.standardUserDefaults().boolForKey("tutorShowed1") == false {
                 self.coachMarksController.startOn(self)
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed1")
+
             } else {
 
             }
@@ -49,6 +52,8 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
     }
 
     func UI() {
+
+        self.navigationItem.title = "Login"
 
         self.coachMarksController.dataSource = self
         self.coachMarksController.allowOverlayTap = false
@@ -100,12 +105,12 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
     }
 
     func requestCode() {
+
         if self.nickFiled.text?.characters.count <= 2 {
-            SCLAlertView().showWarning("Field is empty", subTitle: "Please ensure that Login-Field contains your nickname") // Warning
+            SCLAlertView().showWarning("Invalid login", subTitle: "Please ensure that Login-Field contains your nickname") // Warning
         } else {
-            if self.nickFiled.text == "AppleTest" {
-                self.performSegueWithIdentifier("toCodeValidation", sender: nil)
-            }
+            //SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
+            SwiftSpinner.show("Connecting to inMac")
             self.socket.emitWithAck("app_verification", ["method": "requestCode", "username": self.nickFiled.text!, "uid": uuid, "appid": appid
                 ])(timeoutAfter: 10) { data in
 
@@ -113,10 +118,28 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
                     guard (data.count > 0) else {
                         print("app_verification empty answer")
-                        return }
+                        return
+                    }
 
                     if let json = JSON(rawValue: data[0]) {
-                        if let _ = json["success"].int {
+                        if json["success"].int == 1 {
+
+                            KeyChain().saveUsername(self.nickFiled.text!)
+                            KeyChain().saveUUID(json["uuid"].stringValue)
+
+                            if KeyChain().username() == "AppleTest" {
+                                KeyChain().savePassword("12345")
+                            }
+
+                            let avatar = json["useravatar"].stringValue
+                            imageURL = NSURL(string:"http://st.inmac.org/images/avatars/\(avatar)")!
+                            SwiftSpinner.showWithDuration(0.5, title:"Success!")
+                            self.performSegueWithIdentifier("toCodeValidation", sender: nil)
+                            self.socket.disconnect()
+                        } else {
+                            let message = json["message"].stringValue
+                            print(message)
+                            SwiftSpinner.showWithDuration(0.5, title:"Error!\n User not found")
                         }
                     }
             }

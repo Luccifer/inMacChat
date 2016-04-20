@@ -34,9 +34,29 @@
 		BE2D3C281CC53B91002DEB94 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */; };
 		BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */; };
 		BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */; };
+		BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30DBA91CC7D718002B891B /* NewChatViewController.swift */; };
+		BE30DBAE1CC7DC6C002B891B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30DBAD1CC7DC6C002B891B /* Message.swift */; };
 		BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59D1CC54EBC00917037 /* Configuration.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
 		BE9931281CC75EC3009F26EB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931271CC75EC3009F26EB /* ChatViewController.swift */; };
+		BE99313F1CC7604E009F26EB /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99312A1CC7604E009F26EB /* SLKInputAccessoryView.m */; };
+		BE9931401CC7604E009F26EB /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99312C1CC7604E009F26EB /* SLKTextInput+Implementation.m */; };
+		BE9931411CC7604E009F26EB /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99312E1CC7604E009F26EB /* SLKTextInputbar.m */; };
+		BE9931421CC7604E009F26EB /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931301CC7604E009F26EB /* SLKTextView.m */; };
+		BE9931431CC7604E009F26EB /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931321CC7604E009F26EB /* SLKTextView+SLKAdditions.m */; };
+		BE9931441CC7604E009F26EB /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931341CC7604E009F26EB /* SLKTextViewController.m */; };
+		BE9931451CC7604E009F26EB /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931371CC7604E009F26EB /* SLKTypingIndicatorView.m */; };
+		BE9931461CC7604E009F26EB /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99313A1CC7604E009F26EB /* UIResponder+SLKAdditions.m */; };
+		BE9931471CC7604E009F26EB /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99313C1CC7604E009F26EB /* UIScrollView+SLKAdditions.m */; };
+		BE9931481CC7604E009F26EB /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99313E1CC7604E009F26EB /* UIView+SLKAdditions.m */; };
+		BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931491CC76D18009F26EB /* KeyChain.swift */; };
+		BE9931501CC784FB009F26EB /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99314E1CC784FB009F26EB /* Message.m */; };
+		BE9931591CC7855F009F26EB /* TypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931511CC7855F009F26EB /* TypingIndicatorView.m */; };
+		BE99315A1CC7855F009F26EB /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931531CC7855F009F26EB /* MessageViewController.m */; };
+		BE99315B1CC7855F009F26EB /* MessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931551CC7855F009F26EB /* MessageTextView.m */; };
+		BE99315C1CC7855F009F26EB /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931571CC7855F009F26EB /* MessageTableViewCell.m */; };
+		BE99315F1CC785E2009F26EB /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99315D1CC785E2009F26EB /* LoremIpsum.m */; };
+		BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931631CC796CD009F26EB /* PASImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,9 +92,49 @@
 		BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "inMacChat-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		BE30DBA81CC7CC6B002B891B /* inMacChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = inMacChat.entitlements; sourceTree = "<group>"; };
+		BE30DBA91CC7D718002B891B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		BE30DBAD1CC7DC6C002B891B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BE33A59D1CC54EBC00917037 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
 		BE9931271CC75EC3009F26EB /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BE9931291CC7604E009F26EB /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
+		BE99312A1CC7604E009F26EB /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
+		BE99312B1CC7604E009F26EB /* SLKTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInput.h; sourceTree = "<group>"; };
+		BE99312C1CC7604E009F26EB /* SLKTextInput+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextInput+Implementation.m"; sourceTree = "<group>"; };
+		BE99312D1CC7604E009F26EB /* SLKTextInputbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInputbar.h; sourceTree = "<group>"; };
+		BE99312E1CC7604E009F26EB /* SLKTextInputbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextInputbar.m; sourceTree = "<group>"; };
+		BE99312F1CC7604E009F26EB /* SLKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextView.h; sourceTree = "<group>"; };
+		BE9931301CC7604E009F26EB /* SLKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextView.m; sourceTree = "<group>"; };
+		BE9931311CC7604E009F26EB /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE9931321CC7604E009F26EB /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE9931331CC7604E009F26EB /* SLKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextViewController.h; sourceTree = "<group>"; };
+		BE9931341CC7604E009F26EB /* SLKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextViewController.m; sourceTree = "<group>"; };
+		BE9931351CC7604E009F26EB /* SLKTypingIndicatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorProtocol.h; sourceTree = "<group>"; };
+		BE9931361CC7604E009F26EB /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorView.h; sourceTree = "<group>"; };
+		BE9931371CC7604E009F26EB /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTypingIndicatorView.m; sourceTree = "<group>"; };
+		BE9931381CC7604E009F26EB /* SLKUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKUIConstants.h; sourceTree = "<group>"; };
+		BE9931391CC7604E009F26EB /* UIResponder+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE99313A1CC7604E009F26EB /* UIResponder+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE99313B1CC7604E009F26EB /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE99313C1CC7604E009F26EB /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE99313D1CC7604E009F26EB /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BE99313E1CC7604E009F26EB /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BE9931491CC76D18009F26EB /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		BE99314E1CC784FB009F26EB /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		BE99314F1CC784FB009F26EB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		BE9931511CC7855F009F26EB /* TypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypingIndicatorView.m; sourceTree = "<group>"; };
+		BE9931521CC7855F009F26EB /* TypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypingIndicatorView.h; sourceTree = "<group>"; };
+		BE9931531CC7855F009F26EB /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		BE9931541CC7855F009F26EB /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		BE9931551CC7855F009F26EB /* MessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTextView.m; sourceTree = "<group>"; };
+		BE9931561CC7855F009F26EB /* MessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTextView.h; sourceTree = "<group>"; };
+		BE9931571CC7855F009F26EB /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		BE9931581CC7855F009F26EB /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		BE99315D1CC785E2009F26EB /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoremIpsum.m; sourceTree = "<group>"; };
+		BE99315E1CC785E2009F26EB /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
+		BE9931611CC78F6E009F26EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BE9931631CC796CD009F26EB /* PASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PASImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +161,7 @@
 		B4FD9B524FE051EF3661CE8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE9931611CC78F6E009F26EB /* QuartzCore.framework */,
 				BE2D3C4C1CC54290002DEB94 /* FloatLabel */,
 				BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */,
 				BE2D3C021CC53B72002DEB94 /* SocketIO */,
@@ -130,16 +191,16 @@
 		BE2D3BEF1CC5396C002DEB94 /* inMacChat */ = {
 			isa = PBXGroup;
 			children = (
-				BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */,
-				BE33A59D1CC54EBC00917037 /* Configuration.swift */,
+				BE30DBA81CC7CC6B002B891B /* inMacChat.entitlements */,
+				BE99314B1CC77DEC009F26EB /* Controllers */,
+				BE99314C1CC77DF0009F26EB /* Models */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
-				BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */,
-				BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */,
+				BE9931601CC785F5009F26EB /* Shared */,
 				BE2D3BF41CC5396C002DEB94 /* Main.storyboard */,
-				BE9931271CC75EC3009F26EB /* ChatViewController.swift */,
 				BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */,
 				BE2D3BF91CC5396C002DEB94 /* LaunchScreen.storyboard */,
 				BE2D3BFC1CC5396C002DEB94 /* Info.plist */,
+				BE99314D1CC77E08009F26EB /* Support Files */,
 			);
 			path = inMacChat;
 			sourceTree = "<group>";
@@ -173,6 +234,28 @@
 		BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BE9931291CC7604E009F26EB /* SLKInputAccessoryView.h */,
+				BE99312A1CC7604E009F26EB /* SLKInputAccessoryView.m */,
+				BE99312B1CC7604E009F26EB /* SLKTextInput.h */,
+				BE99312C1CC7604E009F26EB /* SLKTextInput+Implementation.m */,
+				BE99312D1CC7604E009F26EB /* SLKTextInputbar.h */,
+				BE99312E1CC7604E009F26EB /* SLKTextInputbar.m */,
+				BE99312F1CC7604E009F26EB /* SLKTextView.h */,
+				BE9931301CC7604E009F26EB /* SLKTextView.m */,
+				BE9931311CC7604E009F26EB /* SLKTextView+SLKAdditions.h */,
+				BE9931321CC7604E009F26EB /* SLKTextView+SLKAdditions.m */,
+				BE9931331CC7604E009F26EB /* SLKTextViewController.h */,
+				BE9931341CC7604E009F26EB /* SLKTextViewController.m */,
+				BE9931351CC7604E009F26EB /* SLKTypingIndicatorProtocol.h */,
+				BE9931361CC7604E009F26EB /* SLKTypingIndicatorView.h */,
+				BE9931371CC7604E009F26EB /* SLKTypingIndicatorView.m */,
+				BE9931381CC7604E009F26EB /* SLKUIConstants.h */,
+				BE9931391CC7604E009F26EB /* UIResponder+SLKAdditions.h */,
+				BE99313A1CC7604E009F26EB /* UIResponder+SLKAdditions.m */,
+				BE99313B1CC7604E009F26EB /* UIScrollView+SLKAdditions.h */,
+				BE99313C1CC7604E009F26EB /* UIScrollView+SLKAdditions.m */,
+				BE99313D1CC7604E009F26EB /* UIView+SLKAdditions.h */,
+				BE99313E1CC7604E009F26EB /* UIView+SLKAdditions.m */,
 			);
 			name = SlacktextViewController;
 			sourceTree = "<group>";
@@ -184,6 +267,55 @@
 				BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */,
 			);
 			name = FloatLabel;
+			sourceTree = "<group>";
+		};
+		BE99314B1CC77DEC009F26EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */,
+				BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */,
+				BE9931271CC75EC3009F26EB /* ChatViewController.swift */,
+				BE30DBA91CC7D718002B891B /* NewChatViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BE99314C1CC77DF0009F26EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE33A59D1CC54EBC00917037 /* Configuration.swift */,
+				BE9931491CC76D18009F26EB /* KeyChain.swift */,
+				BE30DBAD1CC7DC6C002B891B /* Message.swift */,
+				BE9931631CC796CD009F26EB /* PASImageView.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BE99314D1CC77E08009F26EB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		BE9931601CC785F5009F26EB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BE99314F1CC784FB009F26EB /* Message.h */,
+				BE99314E1CC784FB009F26EB /* Message.m */,
+				BE9931511CC7855F009F26EB /* TypingIndicatorView.m */,
+				BE9931521CC7855F009F26EB /* TypingIndicatorView.h */,
+				BE9931531CC7855F009F26EB /* MessageViewController.m */,
+				BE9931541CC7855F009F26EB /* MessageViewController.h */,
+				BE9931551CC7855F009F26EB /* MessageTextView.m */,
+				BE9931561CC7855F009F26EB /* MessageTextView.h */,
+				BE9931571CC7855F009F26EB /* MessageTableViewCell.m */,
+				BE9931581CC7855F009F26EB /* MessageTableViewCell.h */,
+				BE99315D1CC785E2009F26EB /* LoremIpsum.m */,
+				BE99315E1CC785E2009F26EB /* LoremIpsum.h */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +356,9 @@
 						DevelopmentTeam = QHQL7836SK;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 						};
@@ -314,22 +449,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9931441CC7604E009F26EB /* SLKTextViewController.m in Sources */,
+				BE9931481CC7604E009F26EB /* UIView+SLKAdditions.m in Sources */,
 				BE2D3C231CC53B91002DEB94 /* SocketEnginePacketType.swift in Sources */,
 				BE2D3C191CC53B91002DEB94 /* SocketStringReader.swift in Sources */,
+				BE9931411CC7604E009F26EB /* SLKTextInputbar.m in Sources */,
 				BE2D3C1D1CC53B91002DEB94 /* SocketIOClientStatus.swift in Sources */,
+				BE99315B1CC7855F009F26EB /* MessageTextView.m in Sources */,
+				BE99315A1CC7855F009F26EB /* MessageViewController.m in Sources */,
 				BE2D3BF31CC5396C002DEB94 /* NickNameViewController.swift in Sources */,
+				BE9931431CC7604E009F26EB /* SLKTextView+SLKAdditions.m in Sources */,
+				BE9931401CC7604E009F26EB /* SLKTextInput+Implementation.m in Sources */,
+				BE9931501CC784FB009F26EB /* Message.m in Sources */,
 				BE2D3C221CC53B91002DEB94 /* SocketEngineSpec.swift in Sources */,
 				BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */,
+				BE9931421CC7604E009F26EB /* SLKTextView.m in Sources */,
 				BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */,
 				BE2D3C1F1CC53B91002DEB94 /* SocketIOClient.swift in Sources */,
+				BE30DBAE1CC7DC6C002B891B /* Message.swift in Sources */,
 				BE2D3C251CC53B91002DEB94 /* SocketEngine.swift in Sources */,
 				BE2D3C261CC53B91002DEB94 /* SocketAnyEvent.swift in Sources */,
+				BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */,
 				BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */,
+				BE9931591CC7855F009F26EB /* TypingIndicatorView.m in Sources */,
 				BE2D3C211CC53B91002DEB94 /* SocketEventHandler.swift in Sources */,
 				BE2D3C161CC53B91002DEB94 /* WebSocket.swift in Sources */,
+				BE99315C1CC7855F009F26EB /* MessageTableViewCell.m in Sources */,
 				BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */,
 				BE2D3C1A1CC53B91002DEB94 /* SocketParser.swift in Sources */,
 				BE2D3C181CC53B91002DEB94 /* SocketTypes.swift in Sources */,
+				BE9931461CC7604E009F26EB /* UIResponder+SLKAdditions.m in Sources */,
 				BE2D3C241CC53B91002DEB94 /* SocketEngineClient.swift in Sources */,
 				BE2D3C1C1CC53B91002DEB94 /* SocketLogger.swift in Sources */,
 				BE2D3C201CC53B91002DEB94 /* SocketFixUTF8.swift in Sources */,
@@ -337,9 +486,15 @@
 				BE2D3C271CC53B91002DEB94 /* SocketAckManager.swift in Sources */,
 				BE2D3C1B1CC53B91002DEB94 /* SocketPacket.swift in Sources */,
 				BE2D3C281CC53B91002DEB94 /* SocketAckEmitter.swift in Sources */,
+				BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */,
+				BE99313F1CC7604E009F26EB /* SLKInputAccessoryView.m in Sources */,
+				BE9931451CC7604E009F26EB /* SLKTypingIndicatorView.m in Sources */,
+				BE99315F1CC785E2009F26EB /* LoremIpsum.m in Sources */,
+				BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */,
 				BE2D3C171CC53B91002DEB94 /* SwiftRegex.swift in Sources */,
 				BE2D3C1E1CC53B91002DEB94 /* SocketIOClientOption.swift in Sources */,
 				BE9931281CC75EC3009F26EB /* ChatViewController.swift in Sources */,
+				BE9931471CC7604E009F26EB /* UIScrollView+SLKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = inMacChat/inMacChat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gleb Karpushkin (JJ5D57T553)";
 				INFOPLIST_FILE = inMacChat/Info.plist;
@@ -475,6 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = inMacChat/inMacChat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gleb Karpushkin (QHQL7836SK)";
 				INFOPLIST_FILE = inMacChat/Info.plist;
