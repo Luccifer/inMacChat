@@ -13,25 +13,6 @@
 		BE2D3BF61CC5396C002DEB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D3BF41CC5396C002DEB94 /* Main.storyboard */; };
 		BE2D3BF81CC5396C002DEB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */; };
 		BE2D3BFB1CC5396C002DEB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2D3BF91CC5396C002DEB94 /* LaunchScreen.storyboard */; };
-		BE2D3C161CC53B91002DEB94 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C031CC53B91002DEB94 /* WebSocket.swift */; };
-		BE2D3C171CC53B91002DEB94 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C041CC53B91002DEB94 /* SwiftRegex.swift */; };
-		BE2D3C181CC53B91002DEB94 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C051CC53B91002DEB94 /* SocketTypes.swift */; };
-		BE2D3C191CC53B91002DEB94 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C061CC53B91002DEB94 /* SocketStringReader.swift */; };
-		BE2D3C1A1CC53B91002DEB94 /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C071CC53B91002DEB94 /* SocketParser.swift */; };
-		BE2D3C1B1CC53B91002DEB94 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C081CC53B91002DEB94 /* SocketPacket.swift */; };
-		BE2D3C1C1CC53B91002DEB94 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C091CC53B91002DEB94 /* SocketLogger.swift */; };
-		BE2D3C1D1CC53B91002DEB94 /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0A1CC53B91002DEB94 /* SocketIOClientStatus.swift */; };
-		BE2D3C1E1CC53B91002DEB94 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0B1CC53B91002DEB94 /* SocketIOClientOption.swift */; };
-		BE2D3C1F1CC53B91002DEB94 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0C1CC53B91002DEB94 /* SocketIOClient.swift */; };
-		BE2D3C201CC53B91002DEB94 /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0D1CC53B91002DEB94 /* SocketFixUTF8.swift */; };
-		BE2D3C211CC53B91002DEB94 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0E1CC53B91002DEB94 /* SocketEventHandler.swift */; };
-		BE2D3C221CC53B91002DEB94 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C0F1CC53B91002DEB94 /* SocketEngineSpec.swift */; };
-		BE2D3C231CC53B91002DEB94 /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C101CC53B91002DEB94 /* SocketEnginePacketType.swift */; };
-		BE2D3C241CC53B91002DEB94 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C111CC53B91002DEB94 /* SocketEngineClient.swift */; };
-		BE2D3C251CC53B91002DEB94 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C121CC53B91002DEB94 /* SocketEngine.swift */; };
-		BE2D3C261CC53B91002DEB94 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C131CC53B91002DEB94 /* SocketAnyEvent.swift */; };
-		BE2D3C271CC53B91002DEB94 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C141CC53B91002DEB94 /* SocketAckManager.swift */; };
-		BE2D3C281CC53B91002DEB94 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */; };
 		BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */; };
 		BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */; };
 		BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30DBA91CC7D718002B891B /* NewChatViewController.swift */; };
@@ -39,16 +20,6 @@
 		BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59D1CC54EBC00917037 /* Configuration.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
 		BE9931281CC75EC3009F26EB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931271CC75EC3009F26EB /* ChatViewController.swift */; };
-		BE99313F1CC7604E009F26EB /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99312A1CC7604E009F26EB /* SLKInputAccessoryView.m */; };
-		BE9931401CC7604E009F26EB /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99312C1CC7604E009F26EB /* SLKTextInput+Implementation.m */; };
-		BE9931411CC7604E009F26EB /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99312E1CC7604E009F26EB /* SLKTextInputbar.m */; };
-		BE9931421CC7604E009F26EB /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931301CC7604E009F26EB /* SLKTextView.m */; };
-		BE9931431CC7604E009F26EB /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931321CC7604E009F26EB /* SLKTextView+SLKAdditions.m */; };
-		BE9931441CC7604E009F26EB /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931341CC7604E009F26EB /* SLKTextViewController.m */; };
-		BE9931451CC7604E009F26EB /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931371CC7604E009F26EB /* SLKTypingIndicatorView.m */; };
-		BE9931461CC7604E009F26EB /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99313A1CC7604E009F26EB /* UIResponder+SLKAdditions.m */; };
-		BE9931471CC7604E009F26EB /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99313C1CC7604E009F26EB /* UIScrollView+SLKAdditions.m */; };
-		BE9931481CC7604E009F26EB /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99313E1CC7604E009F26EB /* UIView+SLKAdditions.m */; };
 		BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931491CC76D18009F26EB /* KeyChain.swift */; };
 		BE9931501CC784FB009F26EB /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99314E1CC784FB009F26EB /* Message.m */; };
 		BE9931591CC7855F009F26EB /* TypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931511CC7855F009F26EB /* TypingIndicatorView.m */; };
@@ -57,6 +28,35 @@
 		BE99315C1CC7855F009F26EB /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931571CC7855F009F26EB /* MessageTableViewCell.m */; };
 		BE99315F1CC785E2009F26EB /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99315D1CC785E2009F26EB /* LoremIpsum.m */; };
 		BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931631CC796CD009F26EB /* PASImageView.swift */; };
+		BEC7A9B51CC7E1A700454B3A /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */; };
+		BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */; };
+		BEC7A9B71CC7E1A700454B3A /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A41CC7E1A700454B3A /* SLKTextInputbar.m */; };
+		BEC7A9B81CC7E1A700454B3A /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A61CC7E1A700454B3A /* SLKTextView+SLKAdditions.m */; };
+		BEC7A9B91CC7E1A700454B3A /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A81CC7E1A700454B3A /* SLKTextView.m */; };
+		BEC7A9BA1CC7E1A700454B3A /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9AA1CC7E1A700454B3A /* SLKTextViewController.m */; };
+		BEC7A9BB1CC7E1A700454B3A /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9AD1CC7E1A700454B3A /* SLKTypingIndicatorView.m */; };
+		BEC7A9BC1CC7E1A700454B3A /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9B01CC7E1A700454B3A /* UIResponder+SLKAdditions.m */; };
+		BEC7A9BD1CC7E1A700454B3A /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9B21CC7E1A700454B3A /* UIScrollView+SLKAdditions.m */; };
+		BEC7A9BE1CC7E1A700454B3A /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9B41CC7E1A700454B3A /* UIView+SLKAdditions.m */; };
+		BEC7A9D31CC7E1B500454B3A /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C01CC7E1B500454B3A /* SocketAckEmitter.swift */; };
+		BEC7A9D41CC7E1B500454B3A /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C11CC7E1B500454B3A /* SocketAckManager.swift */; };
+		BEC7A9D51CC7E1B500454B3A /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C21CC7E1B500454B3A /* SocketAnyEvent.swift */; };
+		BEC7A9D61CC7E1B500454B3A /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C31CC7E1B500454B3A /* SocketEngine.swift */; };
+		BEC7A9D71CC7E1B500454B3A /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C41CC7E1B500454B3A /* SocketEngineClient.swift */; };
+		BEC7A9D81CC7E1B500454B3A /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C51CC7E1B500454B3A /* SocketEnginePacketType.swift */; };
+		BEC7A9D91CC7E1B500454B3A /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C61CC7E1B500454B3A /* SocketEngineSpec.swift */; };
+		BEC7A9DA1CC7E1B500454B3A /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C71CC7E1B500454B3A /* SocketEventHandler.swift */; };
+		BEC7A9DB1CC7E1B500454B3A /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C81CC7E1B500454B3A /* SocketFixUTF8.swift */; };
+		BEC7A9DC1CC7E1B500454B3A /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9C91CC7E1B500454B3A /* SocketIOClient.swift */; };
+		BEC7A9DD1CC7E1B500454B3A /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9CA1CC7E1B500454B3A /* SocketIOClientOption.swift */; };
+		BEC7A9DE1CC7E1B500454B3A /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9CB1CC7E1B500454B3A /* SocketIOClientStatus.swift */; };
+		BEC7A9DF1CC7E1B500454B3A /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9CC1CC7E1B500454B3A /* SocketLogger.swift */; };
+		BEC7A9E01CC7E1B500454B3A /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9CD1CC7E1B500454B3A /* SocketPacket.swift */; };
+		BEC7A9E11CC7E1B500454B3A /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9CE1CC7E1B500454B3A /* SocketParser.swift */; };
+		BEC7A9E21CC7E1B500454B3A /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9CF1CC7E1B500454B3A /* SocketStringReader.swift */; };
+		BEC7A9E31CC7E1B500454B3A /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */; };
+		BEC7A9E41CC7E1B500454B3A /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */; };
+		BEC7A9E51CC7E1B500454B3A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,25 +70,6 @@
 		BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2D3BFA1CC5396C002DEB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE2D3BFC1CC5396C002DEB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE2D3C031CC53B91002DEB94 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
-		BE2D3C041CC53B91002DEB94 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
-		BE2D3C051CC53B91002DEB94 /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
-		BE2D3C061CC53B91002DEB94 /* SocketStringReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketStringReader.swift; sourceTree = "<group>"; };
-		BE2D3C071CC53B91002DEB94 /* SocketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketParser.swift; sourceTree = "<group>"; };
-		BE2D3C081CC53B91002DEB94 /* SocketPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketPacket.swift; sourceTree = "<group>"; };
-		BE2D3C091CC53B91002DEB94 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
-		BE2D3C0A1CC53B91002DEB94 /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientStatus.swift; sourceTree = "<group>"; };
-		BE2D3C0B1CC53B91002DEB94 /* SocketIOClientOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientOption.swift; sourceTree = "<group>"; };
-		BE2D3C0C1CC53B91002DEB94 /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
-		BE2D3C0D1CC53B91002DEB94 /* SocketFixUTF8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFixUTF8.swift; sourceTree = "<group>"; };
-		BE2D3C0E1CC53B91002DEB94 /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
-		BE2D3C0F1CC53B91002DEB94 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineSpec.swift; sourceTree = "<group>"; };
-		BE2D3C101CC53B91002DEB94 /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEnginePacketType.swift; sourceTree = "<group>"; };
-		BE2D3C111CC53B91002DEB94 /* SocketEngineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineClient.swift; sourceTree = "<group>"; };
-		BE2D3C121CC53B91002DEB94 /* SocketEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngine.swift; sourceTree = "<group>"; };
-		BE2D3C131CC53B91002DEB94 /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
-		BE2D3C141CC53B91002DEB94 /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
-		BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
 		BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "inMacChat-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
@@ -98,28 +79,6 @@
 		BE33A59D1CC54EBC00917037 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
 		BE9931271CC75EC3009F26EB /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		BE9931291CC7604E009F26EB /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
-		BE99312A1CC7604E009F26EB /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
-		BE99312B1CC7604E009F26EB /* SLKTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInput.h; sourceTree = "<group>"; };
-		BE99312C1CC7604E009F26EB /* SLKTextInput+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextInput+Implementation.m"; sourceTree = "<group>"; };
-		BE99312D1CC7604E009F26EB /* SLKTextInputbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInputbar.h; sourceTree = "<group>"; };
-		BE99312E1CC7604E009F26EB /* SLKTextInputbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextInputbar.m; sourceTree = "<group>"; };
-		BE99312F1CC7604E009F26EB /* SLKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextView.h; sourceTree = "<group>"; };
-		BE9931301CC7604E009F26EB /* SLKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextView.m; sourceTree = "<group>"; };
-		BE9931311CC7604E009F26EB /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
-		BE9931321CC7604E009F26EB /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
-		BE9931331CC7604E009F26EB /* SLKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextViewController.h; sourceTree = "<group>"; };
-		BE9931341CC7604E009F26EB /* SLKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextViewController.m; sourceTree = "<group>"; };
-		BE9931351CC7604E009F26EB /* SLKTypingIndicatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorProtocol.h; sourceTree = "<group>"; };
-		BE9931361CC7604E009F26EB /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorView.h; sourceTree = "<group>"; };
-		BE9931371CC7604E009F26EB /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTypingIndicatorView.m; sourceTree = "<group>"; };
-		BE9931381CC7604E009F26EB /* SLKUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKUIConstants.h; sourceTree = "<group>"; };
-		BE9931391CC7604E009F26EB /* UIResponder+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+SLKAdditions.h"; sourceTree = "<group>"; };
-		BE99313A1CC7604E009F26EB /* UIResponder+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+SLKAdditions.m"; sourceTree = "<group>"; };
-		BE99313B1CC7604E009F26EB /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
-		BE99313C1CC7604E009F26EB /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
-		BE99313D1CC7604E009F26EB /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLKAdditions.h"; sourceTree = "<group>"; };
-		BE99313E1CC7604E009F26EB /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
 		BE9931491CC76D18009F26EB /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		BE99314E1CC784FB009F26EB /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		BE99314F1CC784FB009F26EB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -135,6 +94,47 @@
 		BE99315E1CC785E2009F26EB /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
 		BE9931611CC78F6E009F26EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE9931631CC796CD009F26EB /* PASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PASImageView.swift; sourceTree = "<group>"; };
+		BEC7A99F1CC7E1A700454B3A /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
+		BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
+		BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextInput+Implementation.m"; sourceTree = "<group>"; };
+		BEC7A9A21CC7E1A700454B3A /* SLKTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInput.h; sourceTree = "<group>"; };
+		BEC7A9A31CC7E1A700454B3A /* SLKTextInputbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInputbar.h; sourceTree = "<group>"; };
+		BEC7A9A41CC7E1A700454B3A /* SLKTextInputbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextInputbar.m; sourceTree = "<group>"; };
+		BEC7A9A51CC7E1A700454B3A /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BEC7A9A61CC7E1A700454B3A /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BEC7A9A71CC7E1A700454B3A /* SLKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextView.h; sourceTree = "<group>"; };
+		BEC7A9A81CC7E1A700454B3A /* SLKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextView.m; sourceTree = "<group>"; };
+		BEC7A9A91CC7E1A700454B3A /* SLKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextViewController.h; sourceTree = "<group>"; };
+		BEC7A9AA1CC7E1A700454B3A /* SLKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextViewController.m; sourceTree = "<group>"; };
+		BEC7A9AB1CC7E1A700454B3A /* SLKTypingIndicatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorProtocol.h; sourceTree = "<group>"; };
+		BEC7A9AC1CC7E1A700454B3A /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorView.h; sourceTree = "<group>"; };
+		BEC7A9AD1CC7E1A700454B3A /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTypingIndicatorView.m; sourceTree = "<group>"; };
+		BEC7A9AE1CC7E1A700454B3A /* SLKUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKUIConstants.h; sourceTree = "<group>"; };
+		BEC7A9AF1CC7E1A700454B3A /* UIResponder+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+SLKAdditions.h"; sourceTree = "<group>"; };
+		BEC7A9B01CC7E1A700454B3A /* UIResponder+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+SLKAdditions.m"; sourceTree = "<group>"; };
+		BEC7A9B11CC7E1A700454B3A /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BEC7A9B21CC7E1A700454B3A /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BEC7A9B31CC7E1A700454B3A /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLKAdditions.h"; sourceTree = "<group>"; };
+		BEC7A9B41CC7E1A700454B3A /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
+		BEC7A9C01CC7E1B500454B3A /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
+		BEC7A9C11CC7E1B500454B3A /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
+		BEC7A9C21CC7E1B500454B3A /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
+		BEC7A9C31CC7E1B500454B3A /* SocketEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngine.swift; sourceTree = "<group>"; };
+		BEC7A9C41CC7E1B500454B3A /* SocketEngineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineClient.swift; sourceTree = "<group>"; };
+		BEC7A9C51CC7E1B500454B3A /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEnginePacketType.swift; sourceTree = "<group>"; };
+		BEC7A9C61CC7E1B500454B3A /* SocketEngineSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineSpec.swift; sourceTree = "<group>"; };
+		BEC7A9C71CC7E1B500454B3A /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		BEC7A9C81CC7E1B500454B3A /* SocketFixUTF8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFixUTF8.swift; sourceTree = "<group>"; };
+		BEC7A9C91CC7E1B500454B3A /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		BEC7A9CA1CC7E1B500454B3A /* SocketIOClientOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientOption.swift; sourceTree = "<group>"; };
+		BEC7A9CB1CC7E1B500454B3A /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientStatus.swift; sourceTree = "<group>"; };
+		BEC7A9CC1CC7E1B500454B3A /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
+		BEC7A9CD1CC7E1B500454B3A /* SocketPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketPacket.swift; sourceTree = "<group>"; };
+		BEC7A9CE1CC7E1B500454B3A /* SocketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketParser.swift; sourceTree = "<group>"; };
+		BEC7A9CF1CC7E1B500454B3A /* SocketStringReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketStringReader.swift; sourceTree = "<group>"; };
+		BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
+		BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +161,10 @@
 		B4FD9B524FE051EF3661CE8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEC7A9BF1CC7E1B500454B3A /* SocketIO */,
+				BEC7A99E1CC7E1A700454B3A /* SlackTextViewController */,
 				BE9931611CC78F6E009F26EB /* QuartzCore.framework */,
 				BE2D3C4C1CC54290002DEB94 /* FloatLabel */,
-				BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */,
-				BE2D3C021CC53B72002DEB94 /* SocketIO */,
 				910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */,
 			);
 			name = Frameworks;
@@ -191,7 +191,6 @@
 		BE2D3BEF1CC5396C002DEB94 /* inMacChat */ = {
 			isa = PBXGroup;
 			children = (
-				BE30DBA81CC7CC6B002B891B /* inMacChat.entitlements */,
 				BE99314B1CC77DEC009F26EB /* Controllers */,
 				BE99314C1CC77DF0009F26EB /* Models */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
@@ -199,65 +198,9 @@
 				BE2D3BF41CC5396C002DEB94 /* Main.storyboard */,
 				BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */,
 				BE2D3BF91CC5396C002DEB94 /* LaunchScreen.storyboard */,
-				BE2D3BFC1CC5396C002DEB94 /* Info.plist */,
 				BE99314D1CC77E08009F26EB /* Support Files */,
 			);
 			path = inMacChat;
-			sourceTree = "<group>";
-		};
-		BE2D3C021CC53B72002DEB94 /* SocketIO */ = {
-			isa = PBXGroup;
-			children = (
-				BE2D3C031CC53B91002DEB94 /* WebSocket.swift */,
-				BE2D3C041CC53B91002DEB94 /* SwiftRegex.swift */,
-				BE2D3C051CC53B91002DEB94 /* SocketTypes.swift */,
-				BE2D3C061CC53B91002DEB94 /* SocketStringReader.swift */,
-				BE2D3C071CC53B91002DEB94 /* SocketParser.swift */,
-				BE2D3C081CC53B91002DEB94 /* SocketPacket.swift */,
-				BE2D3C091CC53B91002DEB94 /* SocketLogger.swift */,
-				BE2D3C0A1CC53B91002DEB94 /* SocketIOClientStatus.swift */,
-				BE2D3C0B1CC53B91002DEB94 /* SocketIOClientOption.swift */,
-				BE2D3C0C1CC53B91002DEB94 /* SocketIOClient.swift */,
-				BE2D3C0D1CC53B91002DEB94 /* SocketFixUTF8.swift */,
-				BE2D3C0E1CC53B91002DEB94 /* SocketEventHandler.swift */,
-				BE2D3C0F1CC53B91002DEB94 /* SocketEngineSpec.swift */,
-				BE2D3C101CC53B91002DEB94 /* SocketEnginePacketType.swift */,
-				BE2D3C111CC53B91002DEB94 /* SocketEngineClient.swift */,
-				BE2D3C121CC53B91002DEB94 /* SocketEngine.swift */,
-				BE2D3C131CC53B91002DEB94 /* SocketAnyEvent.swift */,
-				BE2D3C141CC53B91002DEB94 /* SocketAckManager.swift */,
-				BE2D3C151CC53B91002DEB94 /* SocketAckEmitter.swift */,
-			);
-			name = SocketIO;
-			sourceTree = "<group>";
-		};
-		BE2D3C2A1CC5422F002DEB94 /* SlacktextViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE9931291CC7604E009F26EB /* SLKInputAccessoryView.h */,
-				BE99312A1CC7604E009F26EB /* SLKInputAccessoryView.m */,
-				BE99312B1CC7604E009F26EB /* SLKTextInput.h */,
-				BE99312C1CC7604E009F26EB /* SLKTextInput+Implementation.m */,
-				BE99312D1CC7604E009F26EB /* SLKTextInputbar.h */,
-				BE99312E1CC7604E009F26EB /* SLKTextInputbar.m */,
-				BE99312F1CC7604E009F26EB /* SLKTextView.h */,
-				BE9931301CC7604E009F26EB /* SLKTextView.m */,
-				BE9931311CC7604E009F26EB /* SLKTextView+SLKAdditions.h */,
-				BE9931321CC7604E009F26EB /* SLKTextView+SLKAdditions.m */,
-				BE9931331CC7604E009F26EB /* SLKTextViewController.h */,
-				BE9931341CC7604E009F26EB /* SLKTextViewController.m */,
-				BE9931351CC7604E009F26EB /* SLKTypingIndicatorProtocol.h */,
-				BE9931361CC7604E009F26EB /* SLKTypingIndicatorView.h */,
-				BE9931371CC7604E009F26EB /* SLKTypingIndicatorView.m */,
-				BE9931381CC7604E009F26EB /* SLKUIConstants.h */,
-				BE9931391CC7604E009F26EB /* UIResponder+SLKAdditions.h */,
-				BE99313A1CC7604E009F26EB /* UIResponder+SLKAdditions.m */,
-				BE99313B1CC7604E009F26EB /* UIScrollView+SLKAdditions.h */,
-				BE99313C1CC7604E009F26EB /* UIScrollView+SLKAdditions.m */,
-				BE99313D1CC7604E009F26EB /* UIView+SLKAdditions.h */,
-				BE99313E1CC7604E009F26EB /* UIView+SLKAdditions.m */,
-			);
-			name = SlacktextViewController;
 			sourceTree = "<group>";
 		};
 		BE2D3C4C1CC54290002DEB94 /* FloatLabel */ = {
@@ -294,6 +237,8 @@
 		BE99314D1CC77E08009F26EB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE2D3BFC1CC5396C002DEB94 /* Info.plist */,
+				BE30DBA81CC7CC6B002B891B /* inMacChat.entitlements */,
 				BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */,
 			);
 			name = "Support Files";
@@ -316,6 +261,63 @@
 				BE99315E1CC785E2009F26EB /* LoremIpsum.h */,
 			);
 			name = Shared;
+			sourceTree = "<group>";
+		};
+		BEC7A99E1CC7E1A700454B3A /* SlackTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEC7A99F1CC7E1A700454B3A /* SLKInputAccessoryView.h */,
+				BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */,
+				BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */,
+				BEC7A9A21CC7E1A700454B3A /* SLKTextInput.h */,
+				BEC7A9A31CC7E1A700454B3A /* SLKTextInputbar.h */,
+				BEC7A9A41CC7E1A700454B3A /* SLKTextInputbar.m */,
+				BEC7A9A51CC7E1A700454B3A /* SLKTextView+SLKAdditions.h */,
+				BEC7A9A61CC7E1A700454B3A /* SLKTextView+SLKAdditions.m */,
+				BEC7A9A71CC7E1A700454B3A /* SLKTextView.h */,
+				BEC7A9A81CC7E1A700454B3A /* SLKTextView.m */,
+				BEC7A9A91CC7E1A700454B3A /* SLKTextViewController.h */,
+				BEC7A9AA1CC7E1A700454B3A /* SLKTextViewController.m */,
+				BEC7A9AB1CC7E1A700454B3A /* SLKTypingIndicatorProtocol.h */,
+				BEC7A9AC1CC7E1A700454B3A /* SLKTypingIndicatorView.h */,
+				BEC7A9AD1CC7E1A700454B3A /* SLKTypingIndicatorView.m */,
+				BEC7A9AE1CC7E1A700454B3A /* SLKUIConstants.h */,
+				BEC7A9AF1CC7E1A700454B3A /* UIResponder+SLKAdditions.h */,
+				BEC7A9B01CC7E1A700454B3A /* UIResponder+SLKAdditions.m */,
+				BEC7A9B11CC7E1A700454B3A /* UIScrollView+SLKAdditions.h */,
+				BEC7A9B21CC7E1A700454B3A /* UIScrollView+SLKAdditions.m */,
+				BEC7A9B31CC7E1A700454B3A /* UIView+SLKAdditions.h */,
+				BEC7A9B41CC7E1A700454B3A /* UIView+SLKAdditions.m */,
+			);
+			name = SlackTextViewController;
+			path = inMacChat/SlackTextViewController;
+			sourceTree = "<group>";
+		};
+		BEC7A9BF1CC7E1B500454B3A /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				BEC7A9C01CC7E1B500454B3A /* SocketAckEmitter.swift */,
+				BEC7A9C11CC7E1B500454B3A /* SocketAckManager.swift */,
+				BEC7A9C21CC7E1B500454B3A /* SocketAnyEvent.swift */,
+				BEC7A9C31CC7E1B500454B3A /* SocketEngine.swift */,
+				BEC7A9C41CC7E1B500454B3A /* SocketEngineClient.swift */,
+				BEC7A9C51CC7E1B500454B3A /* SocketEnginePacketType.swift */,
+				BEC7A9C61CC7E1B500454B3A /* SocketEngineSpec.swift */,
+				BEC7A9C71CC7E1B500454B3A /* SocketEventHandler.swift */,
+				BEC7A9C81CC7E1B500454B3A /* SocketFixUTF8.swift */,
+				BEC7A9C91CC7E1B500454B3A /* SocketIOClient.swift */,
+				BEC7A9CA1CC7E1B500454B3A /* SocketIOClientOption.swift */,
+				BEC7A9CB1CC7E1B500454B3A /* SocketIOClientStatus.swift */,
+				BEC7A9CC1CC7E1B500454B3A /* SocketLogger.swift */,
+				BEC7A9CD1CC7E1B500454B3A /* SocketPacket.swift */,
+				BEC7A9CE1CC7E1B500454B3A /* SocketParser.swift */,
+				BEC7A9CF1CC7E1B500454B3A /* SocketStringReader.swift */,
+				BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */,
+				BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */,
+				BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */,
+			);
+			name = SocketIO;
+			path = inMacChat/SocketIO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,52 +451,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9931441CC7604E009F26EB /* SLKTextViewController.m in Sources */,
-				BE9931481CC7604E009F26EB /* UIView+SLKAdditions.m in Sources */,
-				BE2D3C231CC53B91002DEB94 /* SocketEnginePacketType.swift in Sources */,
-				BE2D3C191CC53B91002DEB94 /* SocketStringReader.swift in Sources */,
-				BE9931411CC7604E009F26EB /* SLKTextInputbar.m in Sources */,
-				BE2D3C1D1CC53B91002DEB94 /* SocketIOClientStatus.swift in Sources */,
 				BE99315B1CC7855F009F26EB /* MessageTextView.m in Sources */,
 				BE99315A1CC7855F009F26EB /* MessageViewController.m in Sources */,
+				BEC7A9E41CC7E1B500454B3A /* SwiftRegex.swift in Sources */,
+				BEC7A9E31CC7E1B500454B3A /* SocketTypes.swift in Sources */,
 				BE2D3BF31CC5396C002DEB94 /* NickNameViewController.swift in Sources */,
-				BE9931431CC7604E009F26EB /* SLKTextView+SLKAdditions.m in Sources */,
-				BE9931401CC7604E009F26EB /* SLKTextInput+Implementation.m in Sources */,
 				BE9931501CC784FB009F26EB /* Message.m in Sources */,
-				BE2D3C221CC53B91002DEB94 /* SocketEngineSpec.swift in Sources */,
+				BEC7A9BD1CC7E1A700454B3A /* UIScrollView+SLKAdditions.m in Sources */,
+				BEC7A9B71CC7E1A700454B3A /* SLKTextInputbar.m in Sources */,
+				BEC7A9DF1CC7E1B500454B3A /* SocketLogger.swift in Sources */,
+				BEC7A9BC1CC7E1A700454B3A /* UIResponder+SLKAdditions.m in Sources */,
 				BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */,
-				BE9931421CC7604E009F26EB /* SLKTextView.m in Sources */,
+				BEC7A9B51CC7E1A700454B3A /* SLKInputAccessoryView.m in Sources */,
+				BEC7A9DB1CC7E1B500454B3A /* SocketFixUTF8.swift in Sources */,
+				BEC7A9E51CC7E1B500454B3A /* WebSocket.swift in Sources */,
+				BEC7A9E01CC7E1B500454B3A /* SocketPacket.swift in Sources */,
 				BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */,
-				BE2D3C1F1CC53B91002DEB94 /* SocketIOClient.swift in Sources */,
+				BEC7A9BB1CC7E1A700454B3A /* SLKTypingIndicatorView.m in Sources */,
+				BEC7A9D31CC7E1B500454B3A /* SocketAckEmitter.swift in Sources */,
+				BEC7A9B81CC7E1A700454B3A /* SLKTextView+SLKAdditions.m in Sources */,
 				BE30DBAE1CC7DC6C002B891B /* Message.swift in Sources */,
-				BE2D3C251CC53B91002DEB94 /* SocketEngine.swift in Sources */,
-				BE2D3C261CC53B91002DEB94 /* SocketAnyEvent.swift in Sources */,
+				BEC7A9E11CC7E1B500454B3A /* SocketParser.swift in Sources */,
 				BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */,
+				BEC7A9D61CC7E1B500454B3A /* SocketEngine.swift in Sources */,
 				BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */,
+				BEC7A9D71CC7E1B500454B3A /* SocketEngineClient.swift in Sources */,
 				BE9931591CC7855F009F26EB /* TypingIndicatorView.m in Sources */,
-				BE2D3C211CC53B91002DEB94 /* SocketEventHandler.swift in Sources */,
-				BE2D3C161CC53B91002DEB94 /* WebSocket.swift in Sources */,
+				BEC7A9E21CC7E1B500454B3A /* SocketStringReader.swift in Sources */,
+				BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */,
 				BE99315C1CC7855F009F26EB /* MessageTableViewCell.m in Sources */,
+				BEC7A9D41CC7E1B500454B3A /* SocketAckManager.swift in Sources */,
+				BEC7A9D81CC7E1B500454B3A /* SocketEnginePacketType.swift in Sources */,
+				BEC7A9D51CC7E1B500454B3A /* SocketAnyEvent.swift in Sources */,
 				BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */,
-				BE2D3C1A1CC53B91002DEB94 /* SocketParser.swift in Sources */,
-				BE2D3C181CC53B91002DEB94 /* SocketTypes.swift in Sources */,
-				BE9931461CC7604E009F26EB /* UIResponder+SLKAdditions.m in Sources */,
-				BE2D3C241CC53B91002DEB94 /* SocketEngineClient.swift in Sources */,
-				BE2D3C1C1CC53B91002DEB94 /* SocketLogger.swift in Sources */,
-				BE2D3C201CC53B91002DEB94 /* SocketFixUTF8.swift in Sources */,
+				BEC7A9BE1CC7E1A700454B3A /* UIView+SLKAdditions.m in Sources */,
+				BEC7A9DC1CC7E1B500454B3A /* SocketIOClient.swift in Sources */,
 				BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */,
-				BE2D3C271CC53B91002DEB94 /* SocketAckManager.swift in Sources */,
-				BE2D3C1B1CC53B91002DEB94 /* SocketPacket.swift in Sources */,
-				BE2D3C281CC53B91002DEB94 /* SocketAckEmitter.swift in Sources */,
 				BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */,
-				BE99313F1CC7604E009F26EB /* SLKInputAccessoryView.m in Sources */,
-				BE9931451CC7604E009F26EB /* SLKTypingIndicatorView.m in Sources */,
 				BE99315F1CC785E2009F26EB /* LoremIpsum.m in Sources */,
 				BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */,
-				BE2D3C171CC53B91002DEB94 /* SwiftRegex.swift in Sources */,
-				BE2D3C1E1CC53B91002DEB94 /* SocketIOClientOption.swift in Sources */,
+				BEC7A9DD1CC7E1B500454B3A /* SocketIOClientOption.swift in Sources */,
+				BEC7A9BA1CC7E1A700454B3A /* SLKTextViewController.m in Sources */,
+				BEC7A9DE1CC7E1B500454B3A /* SocketIOClientStatus.swift in Sources */,
+				BEC7A9D91CC7E1B500454B3A /* SocketEngineSpec.swift in Sources */,
+				BEC7A9DA1CC7E1B500454B3A /* SocketEventHandler.swift in Sources */,
+				BEC7A9B91CC7E1A700454B3A /* SLKTextView.m in Sources */,
 				BE9931281CC75EC3009F26EB /* ChatViewController.swift in Sources */,
-				BE9931471CC7604E009F26EB /* UIScrollView+SLKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

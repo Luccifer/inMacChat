@@ -57,10 +57,10 @@ class ChatViewController: SLKTextViewController {
     }
 
     func commonInit() {
-
-        NSNotificationCenter.defaultCenter().addObserver(self.tableView!, selector: #selector(UITableView.reloadData), name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessageViewController.textInputbarDidMove(_:)), name: SLKTextInputbarDidMoveNotification, object: nil)
-        self.registerClassForTextView(MessageTextView.classForCoder())
+        //
+        //        NSNotificationCenter.defaultCenter().addObserver(self.tableView!, selector: #selector(UITableView.reloadData), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        //        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessageViewController.textInputbarDidMove(_:)), name: SLKTextInputbarDidMoveNotification, object: nil)
+        //        self.registerClassForTextView(MessageTextView.classForCoder())
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,22 +74,22 @@ class ChatViewController: SLKTextViewController {
 
 
 
-extension ChatViewController {
-
-    func configureDataSource() {
-
-        var array = [Message]()
-
-        for _ in 0..<100 {
-            let words = Int((arc4random() % 40)+1)
-
-            message.username = LoremIpsum.name()
-            message.text = LoremIpsum.wordsWithNumber(words)
-            array.append(message)
-        }
-
-        let reversed = array.reverse()
-
-        self.messages.appendContentsOf(reversed)
-    }
-}
+//extension ChatViewController {
+//
+//    func configureDataSource() {
+//
+//        var array = [Message]()
+//
+//        for _ in 0..<100 {
+//            let words = Int((arc4random() % 40)+1)
+//
+//            message.username = LoremIpsum.name()
+//            message.text = LoremIpsum.wordsWithNumber(words)
+//            array.append(message)
+//        }
+//
+//        let reversed = array.reverse()
+//
+//        self.messages.appendContentsOf(reversed)
+//    }
+//}
