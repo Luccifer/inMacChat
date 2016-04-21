@@ -14,7 +14,7 @@ struct Message {
     let userid: Int
     let id: String
     let username: String
-    var text: NSMutableString
+    var text: String
     let isPrivate: Bool
     let userlevel: Int
     let userAvatar: String
@@ -35,8 +35,8 @@ struct Message {
         userAvatar = item["useravatar"].stringValue,
         userlevel = item["userlevel"].intValue,
         time = item["time"].intValue
-        
-        return Message(userid: userid, id: id, username: username, text: NSMutableString(string: msg), isPrivate: isPrivate > 0, userlevel: userlevel, userAvatar: "http://st.inmac.org/images/avatars/\(userAvatar)", time: NSDate(timeIntervalSince1970: NSNumber(double: Double(time)).doubleValue))
-        }
+
+        return Message(userid: userid, id: id, username: username, text: msg, isPrivate: isPrivate > 0, userlevel: userlevel, userAvatar: "http://st.inmac.org/images/avatars/\(userAvatar)", time: NSDate(timeIntervalSince1970: NSNumber(double: Double(time)).doubleValue))
+    }
 
 }

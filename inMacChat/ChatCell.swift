@@ -28,7 +28,6 @@ class ChatCell: UITableViewCell {
         label.textColor = UIColor.blackColor()
         label.scrollEnabled = false
         label.dataDetectorTypes = UIDataDetectorTypes.All
-        label.text = ""
         label.editable = false
         label.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         return label

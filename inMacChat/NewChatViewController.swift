@@ -11,6 +11,7 @@ import SwiftyJSON
 import SwiftSpinner
 import Haneke
 
+
 class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
 
     let socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
@@ -27,8 +28,8 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
         SwiftSpinner.show("Chat init...", animated: true)
         self.commonInit()
         self.UI()
-        self.tableView!.setNeedsLayout()
-        self.tableView!.layoutIfNeeded()
+        //        self.tableView!.setNeedsLayout()
+        //        self.tableView!.layoutIfNeeded()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -51,11 +52,11 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
             make.centerX.equalTo(self.view)
             make.centerY.equalTo(self.view)
         }
-        
+
         self.view.backgroundColor = UIColor.whiteColor()
         self.tableView?.backgroundView?.backgroundColor = UIColor.whiteColor()
         self.tableView!.backgroundColor = UIColor.whiteColor()
-        
+
         self.tableView!.estimatedRowHeight = 100
         self.tableView!.rowHeight = UITableViewAutomaticDimension
 
@@ -168,140 +169,150 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
                             }
                         }
 
-                            //                    case "loggedin":
-                            //                        if let item: JSON = json["client"] {
-                            //                            if let user = User.parseFromJson(item) {
-                            //                                print(user.isMember)
-                            //                            }
-                            //                        }
-                            //
-                            //
-                            //                    case "history":
-                            //                        if let list = json["list"].array {
-                            //                            for item in list {
-                            //                                if let message = MessageNew.parseFromJson(item) {
-                            //                                    self.messages.append(message)
-                            //                                }
-                            //                            }
-                            //
-                            //                            dispatch_async(dispatch_get_main_queue()) {
-                            //                                () -> Void in
-                            //                                self.tableView.reloadData()
-                            //                                if self.messages.count > 0 {
-                            //
-                            //                                }
-                            //                            }
-                            //
-                            //                        }
-                            //
-                            //                    case "message_writes":
-                            //                        let status = json["status"].intValue
-                            //                        let username = json["username"].stringValue
-                            //                        if status == 1 {
-                            //
-                            //                            self.typingIndicatorView.insertUsername("\(username)")
-                            //                        }
-                            //
-                            //                    case "message_new":
-                            //                        if let message = MessageNew.parseFromJson(json) {
-                            //
-                            //                            self.messages.append(message)
-                            //                            self.usersArray.append(message.username)
-                            //                            self.usersArray = self.uniq(self.usersArray)
-                            //                            print(self.usersArray)
-                            //
-                            //                            let index = NSIndexPath(forRow: self.tableView.numberOfRowsInSection(0) - 1,
-                            //                                                    inSection: 0)
-                            //
-                            //                            self.tableView.insertRowsAtIndexPaths([index], withRowAnimation: UITableViewRowAnimation.Automatic)
-                            //                            //                            self.scrollToBottomMessage()
-                            //                        }
-                            //
-                            //                        //                        dispatch_async(dispatch_get_main_queue()) {
-                            //                        //                            () -> Void in
-                            //                        //                            self.tableView.reloadData()
-                            //                        //                            if self.messages.count > 0 {
-                            //                        //
-                            //                        //                            }
-                            //                        //                             self.scrollToBottomMessage()
-                            //                        //                        }
-                            //
-                            //
-                            //                    case "message_delete":
-                            //                        if let id = json["id"].string, let username = json["username"].string {
-                            //                            if let index = self.messages.indexOf({$0.id == id}) {
-                            //
-                            //                                self.messages.removeAtIndex(index)
-                            //
-                            //                                print("deleted message with id:\(id) of:\(username) at index: \(index)")
-                            //
-                            //                                //                                self.tableView.reloadData()
-                            //                            }
-                            //                        }
-                            //
-                            //                    case "message_edit":
-                            //                        if let id = json["id"].string, let message = json["msg"].string {
-                            //                            if let index = self.messages.indexOf({$0.id == id}) {
-                            //                                self.messages[index].text = NSMutableString(string: message)
-                            //
-                            //                            }
-                            //                        }
-                            //                        print("mesage Editing")
-                            //                        //                        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(60.0 * Double(NSEC_PER_SEC)))
-                            //                        //                        dispatch_after(delayTime, dispatch_get_main_queue()) {
-                            //                        //                            self.tableView.reloadData()
-                            //                        //                        }
-                            //                        //
-                            //                    //
-                            default: print(" [\(method)] method received ")
+                        //                    case "loggedin":
+                        //                        if let item: JSON = json["client"] {
+                        //                            if let user = User.parseFromJson(item) {
+                        //                                print(user.isMember)
+                        //                            }
+                        //                        }
+                        //
+                        //
+                        //                    case "history":
+                        //                        if let list = json["list"].array {
+                        //                            for item in list {
+                        //                                if let message = MessageNew.parseFromJson(item) {
+                        //                                    self.messages.append(message)
+                        //                                }
+                        //                            }
+                        //
+                        //                            dispatch_async(dispatch_get_main_queue()) {
+                        //                                () -> Void in
+                        //                                self.tableView.reloadData()
+                        //                                if self.messages.count > 0 {
+                        //
+                        //                                }
+                        //                            }
+                        //
+                        //                        }
+                        //
+                        //                    case "message_writes":
+                        //                        let status = json["status"].intValue
+                        //                        let username = json["username"].stringValue
+                        //                        if status == 1 {
+                        //
+                        //                            self.typingIndicatorView.insertUsername("\(username)")
+                        //                        }
+                        //
+                        //                    case "message_new":
+                        //                        if let message = MessageNew.parseFromJson(json) {
+                        //
+                        //                            self.messages.append(message)
+                        //                            self.usersArray.append(message.username)
+                        //                            self.usersArray = self.uniq(self.usersArray)
+                        //                            print(self.usersArray)
+                        //
+                        //                            let index = NSIndexPath(forRow: self.tableView.numberOfRowsInSection(0) - 1,
+                        //                                                    inSection: 0)
+                        //
+                        //                            self.tableView.insertRowsAtIndexPaths([index], withRowAnimation: UITableViewRowAnimation.Automatic)
+                        //                            //                            self.scrollToBottomMessage()
+                        //                        }
+                        //
+                        //                        //                        dispatch_async(dispatch_get_main_queue()) {
+                        //                        //                            () -> Void in
+                        //                        //                            self.tableView.reloadData()
+                        //                        //                            if self.messages.count > 0 {
+                        //                        //
+                        //                        //                            }
+                        //                        //                             self.scrollToBottomMessage()
+                        //                        //                        }
+                        //
+                        //
+                        //                    case "message_delete":
+                        //                        if let id = json["id"].string, let username = json["username"].string {
+                        //                            if let index = self.messages.indexOf({$0.id == id}) {
+                        //
+                        //                                self.messages.removeAtIndex(index)
+                        //
+                        //                                print("deleted message with id:\(id) of:\(username) at index: \(index)")
+                        //
+                        //                                //                                self.tableView.reloadData()
+                        //                            }
+                        //                        }
+                        //
+                        //                    case "message_edit":
+                        //                        if let id = json["id"].string, let message = json["msg"].string {
+                        //                            if let index = self.messages.indexOf({$0.id == id}) {
+                        //                                self.messages[index].text = NSMutableString(string: message)
+                        //
+                        //                            }
+                        //                        }
+                        //                        print("mesage Editing")
+                        //                        //                        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(60.0 * Double(NSEC_PER_SEC)))
+                        //                        //                        dispatch_after(delayTime, dispatch_get_main_queue()) {
+                        //                        //                            self.tableView.reloadData()
+                        //                        //                        }
+                        //                        //
+                    //                    //
+                    default: print(" [\(method)] method received ")
 
-                        }
                     }
                 }
             }
         }
+    }
 
-        override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.messages.count
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.messages.count
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        let message = self.messages[indexPath.row]
+
+        let cell = self.tableView?.dequeueReusableCellWithIdentifier("ChatCell") as! ChatCell
+
+
+        cell.avatarImage.hnk_setImageFromURL(NSURL(string: message.userAvatar)!, placeholder: UIImage(named: "noavatar.png"))
+
+
+        cell.bodyLabel.attributedText = TextFormatter().completeText(message.text)
+        //        cell.bodyLabel.text = String(message.text)
+
+        //name
+        switch (message.userlevel) {
+        case 20:
+            cell.nameLabel.textColor = UIColor(red: 216.0 / 255.0, green: 108.0 / 255.0, blue: 60.0 / 255.0, alpha: 1.0)
+            cell.nameLabel.text = message.username
+        case 3:
+            cell.nameLabel.textColor = UIColor(red: 29.0 / 255.0, green: 112.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+            cell.nameLabel.text = message.username
+        case 2:
+            cell.nameLabel.textColor = UIColor(red: 29.0 / 255.0, green: 112.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+            cell.nameLabel.text = message.username
+        case 1:
+            cell.nameLabel.textColor = UIColor(red: 243.0 / 255.0, green: 0.0 / 255.0, blue: 6.0 / 255.0, alpha: 1.0)
+            cell.nameLabel.text = message.username
+        default:
+            cell.nameLabel.textColor = UIColor(red: 50.0 / 255.0, green: 117.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
+            cell.nameLabel.text = message.username
         }
 
-        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            
-            let message = self.messages[indexPath.row]
-            
-            let cell = self.tableView?.dequeueReusableCellWithIdentifier("ChatCell") as! ChatCell
-            
-            
-            cell.avatarImage.hnk_setImageFromURL(NSURL(string: message.userAvatar)!, placeholder: UIImage(named: "noavatar.png"))
-           
-            cell.bodyLabel.text = String(message.text)
-            
-            //name
-            switch (message.userlevel) {
-            case 20:
-                cell.nameLabel.textColor = UIColor(red: 216.0 / 255.0, green: 108.0 / 255.0, blue: 60.0 / 255.0, alpha: 1.0)
-                 cell.nameLabel.text = message.username
-            case 3:
-                cell.nameLabel.textColor = UIColor(red: 29.0 / 255.0, green: 112.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
-                 cell.nameLabel.text = message.username
-            case 2:
-                cell.nameLabel.textColor = UIColor(red: 29.0 / 255.0, green: 112.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
-                 cell.nameLabel.text = message.username
-            case 1:
-                cell.nameLabel.textColor = UIColor(red: 243.0 / 255.0, green: 0.0 / 255.0, blue: 6.0 / 255.0, alpha: 1.0)
-                 cell.nameLabel.text = message.username
-            default:
-                cell.nameLabel.textColor = UIColor(red: 50.0 / 255.0, green: 117.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
-                 cell.nameLabel.text = message.username
-            }
-            
-            //time
-            let format  = NSDateFormatter()
-            format.timeStyle = NSDateFormatterStyle.ShortStyle
-            format.dateStyle = NSDateFormatterStyle.NoStyle
-            let formatedTime = NSAttributedString(string: format.stringFromDate(message.time!), attributes: [NSFontAttributeName : UIFont.systemFontOfSize(9.0)])
-            cell.timeLabel.attributedText = formatedTime
-            
-            return cell
-        }
+        //time
+        let format  = NSDateFormatter()
+        format.timeStyle = NSDateFormatterStyle.ShortStyle
+        format.dateStyle = NSDateFormatterStyle.NoStyle
+        let formatedTime = NSAttributedString(string: format.stringFromDate(message.time!), attributes: [NSFontAttributeName : UIFont.systemFontOfSize(9.0)])
+        cell.timeLabel.attributedText = formatedTime
+
+        return cell
+    }
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
 }
