@@ -13,6 +13,7 @@ target 'inMacChat' do
     pod 'SwiftSpinner'
     pod 'MMNumberKeyboard'
     pod 'KeychainAccess'
+    pod 'EZSwiftExtensions'
 end
 
 post_install do |installer|

@@ -52,7 +52,7 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-         self.socket.connect()
+        self.socket.connect()
         if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed") == nil {
             self.coachMarksController.startOn(self)
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed")
@@ -212,16 +212,19 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
             if let json = JSON(rawValue: data[0]) {
                 if let success = json["success"].int {
                     if success > 0 {
-                        token = json["token"].stringValue
-                        userid = json["userid"].intValue
-
+                        KeyChain().saveToken(json["token"].stringValue)
+                        KeyChain().saveUserID(json["userid"].stringValue)
 
                         print("Code Confirm Success")
-                        SwiftSpinner.hide()
-                        self.performSegueWithIdentifier("toChat1", sender: nil)
+                        SwiftSpinner.showWithDuration(0.7, title: "Success", animated: false)
+                        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
+                        dispatch_after(delayTime, dispatch_get_main_queue()) {
+                            self.performSegueWithIdentifier("toChat1", sender: nil)
+                        }
+
                         self.socket.disconnect()
                     } else {
-
+                        KeyChain()
                         print(" code_verification unsuccessful ")
 
                         if let reason = json["reason"].string {

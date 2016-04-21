@@ -16,17 +16,10 @@
 		BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */; };
 		BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */; };
 		BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30DBA91CC7D718002B891B /* NewChatViewController.swift */; };
-		BE30DBAE1CC7DC6C002B891B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30DBAD1CC7DC6C002B891B /* Message.swift */; };
-		BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59D1CC54EBC00917037 /* Configuration.swift */; };
+		BE338FC61CC9395A00954B38 /* MessageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC41CC9395A00954B38 /* MessageStruct.swift */; };
+		BE338FC71CC9395A00954B38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC51CC9395A00954B38 /* User.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
-		BE9931281CC75EC3009F26EB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931271CC75EC3009F26EB /* ChatViewController.swift */; };
 		BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931491CC76D18009F26EB /* KeyChain.swift */; };
-		BE9931501CC784FB009F26EB /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99314E1CC784FB009F26EB /* Message.m */; };
-		BE9931591CC7855F009F26EB /* TypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931511CC7855F009F26EB /* TypingIndicatorView.m */; };
-		BE99315A1CC7855F009F26EB /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931531CC7855F009F26EB /* MessageViewController.m */; };
-		BE99315B1CC7855F009F26EB /* MessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931551CC7855F009F26EB /* MessageTextView.m */; };
-		BE99315C1CC7855F009F26EB /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9931571CC7855F009F26EB /* MessageTableViewCell.m */; };
-		BE99315F1CC785E2009F26EB /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = BE99315D1CC785E2009F26EB /* LoremIpsum.m */; };
 		BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931631CC796CD009F26EB /* PASImageView.swift */; };
 		BEC7A9B51CC7E1A700454B3A /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */; };
 		BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */; };
@@ -75,23 +68,10 @@
 		BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		BE30DBA81CC7CC6B002B891B /* inMacChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = inMacChat.entitlements; sourceTree = "<group>"; };
 		BE30DBA91CC7D718002B891B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
-		BE30DBAD1CC7DC6C002B891B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		BE33A59D1CC54EBC00917037 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BE338FC41CC9395A00954B38 /* MessageStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageStruct.swift; sourceTree = "<group>"; };
+		BE338FC51CC9395A00954B38 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
-		BE9931271CC75EC3009F26EB /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BE9931491CC76D18009F26EB /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
-		BE99314E1CC784FB009F26EB /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		BE99314F1CC784FB009F26EB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		BE9931511CC7855F009F26EB /* TypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypingIndicatorView.m; sourceTree = "<group>"; };
-		BE9931521CC7855F009F26EB /* TypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypingIndicatorView.h; sourceTree = "<group>"; };
-		BE9931531CC7855F009F26EB /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
-		BE9931541CC7855F009F26EB /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
-		BE9931551CC7855F009F26EB /* MessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTextView.m; sourceTree = "<group>"; };
-		BE9931561CC7855F009F26EB /* MessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTextView.h; sourceTree = "<group>"; };
-		BE9931571CC7855F009F26EB /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
-		BE9931581CC7855F009F26EB /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
-		BE99315D1CC785E2009F26EB /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoremIpsum.m; sourceTree = "<group>"; };
-		BE99315E1CC785E2009F26EB /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
 		BE9931611CC78F6E009F26EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE9931631CC796CD009F26EB /* PASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PASImageView.swift; sourceTree = "<group>"; };
 		BEC7A99F1CC7E1A700454B3A /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
@@ -217,7 +197,6 @@
 			children = (
 				BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */,
 				BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */,
-				BE9931271CC75EC3009F26EB /* ChatViewController.swift */,
 				BE30DBA91CC7D718002B891B /* NewChatViewController.swift */,
 			);
 			name = Controllers;
@@ -226,9 +205,9 @@
 		BE99314C1CC77DF0009F26EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BE33A59D1CC54EBC00917037 /* Configuration.swift */,
+				BE338FC51CC9395A00954B38 /* User.swift */,
+				BE338FC41CC9395A00954B38 /* MessageStruct.swift */,
 				BE9931491CC76D18009F26EB /* KeyChain.swift */,
-				BE30DBAD1CC7DC6C002B891B /* Message.swift */,
 				BE9931631CC796CD009F26EB /* PASImageView.swift */,
 			);
 			name = Models;
@@ -247,18 +226,6 @@
 		BE9931601CC785F5009F26EB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				BE99314F1CC784FB009F26EB /* Message.h */,
-				BE99314E1CC784FB009F26EB /* Message.m */,
-				BE9931511CC7855F009F26EB /* TypingIndicatorView.m */,
-				BE9931521CC7855F009F26EB /* TypingIndicatorView.h */,
-				BE9931531CC7855F009F26EB /* MessageViewController.m */,
-				BE9931541CC7855F009F26EB /* MessageViewController.h */,
-				BE9931551CC7855F009F26EB /* MessageTextView.m */,
-				BE9931561CC7855F009F26EB /* MessageTextView.h */,
-				BE9931571CC7855F009F26EB /* MessageTableViewCell.m */,
-				BE9931581CC7855F009F26EB /* MessageTableViewCell.h */,
-				BE99315D1CC785E2009F26EB /* LoremIpsum.m */,
-				BE99315E1CC785E2009F26EB /* LoremIpsum.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -451,12 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE99315B1CC7855F009F26EB /* MessageTextView.m in Sources */,
-				BE99315A1CC7855F009F26EB /* MessageViewController.m in Sources */,
 				BEC7A9E41CC7E1B500454B3A /* SwiftRegex.swift in Sources */,
 				BEC7A9E31CC7E1B500454B3A /* SocketTypes.swift in Sources */,
 				BE2D3BF31CC5396C002DEB94 /* NickNameViewController.swift in Sources */,
-				BE9931501CC784FB009F26EB /* Message.m in Sources */,
 				BEC7A9BD1CC7E1A700454B3A /* UIScrollView+SLKAdditions.m in Sources */,
 				BEC7A9B71CC7E1A700454B3A /* SLKTextInputbar.m in Sources */,
 				BEC7A9DF1CC7E1B500454B3A /* SocketLogger.swift in Sources */,
@@ -466,29 +430,26 @@
 				BEC7A9DB1CC7E1B500454B3A /* SocketFixUTF8.swift in Sources */,
 				BEC7A9E51CC7E1B500454B3A /* WebSocket.swift in Sources */,
 				BEC7A9E01CC7E1B500454B3A /* SocketPacket.swift in Sources */,
+				BE338FC71CC9395A00954B38 /* User.swift in Sources */,
 				BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */,
 				BEC7A9BB1CC7E1A700454B3A /* SLKTypingIndicatorView.m in Sources */,
 				BEC7A9D31CC7E1B500454B3A /* SocketAckEmitter.swift in Sources */,
 				BEC7A9B81CC7E1A700454B3A /* SLKTextView+SLKAdditions.m in Sources */,
-				BE30DBAE1CC7DC6C002B891B /* Message.swift in Sources */,
 				BEC7A9E11CC7E1B500454B3A /* SocketParser.swift in Sources */,
 				BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */,
 				BEC7A9D61CC7E1B500454B3A /* SocketEngine.swift in Sources */,
 				BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */,
 				BEC7A9D71CC7E1B500454B3A /* SocketEngineClient.swift in Sources */,
-				BE9931591CC7855F009F26EB /* TypingIndicatorView.m in Sources */,
 				BEC7A9E21CC7E1B500454B3A /* SocketStringReader.swift in Sources */,
 				BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */,
-				BE99315C1CC7855F009F26EB /* MessageTableViewCell.m in Sources */,
+				BE338FC61CC9395A00954B38 /* MessageStruct.swift in Sources */,
 				BEC7A9D41CC7E1B500454B3A /* SocketAckManager.swift in Sources */,
 				BEC7A9D81CC7E1B500454B3A /* SocketEnginePacketType.swift in Sources */,
 				BEC7A9D51CC7E1B500454B3A /* SocketAnyEvent.swift in Sources */,
-				BE33A59E1CC54EBC00917037 /* Configuration.swift in Sources */,
 				BEC7A9BE1CC7E1A700454B3A /* UIView+SLKAdditions.m in Sources */,
 				BEC7A9DC1CC7E1B500454B3A /* SocketIOClient.swift in Sources */,
 				BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */,
 				BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */,
-				BE99315F1CC785E2009F26EB /* LoremIpsum.m in Sources */,
 				BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */,
 				BEC7A9DD1CC7E1B500454B3A /* SocketIOClientOption.swift in Sources */,
 				BEC7A9BA1CC7E1A700454B3A /* SLKTextViewController.m in Sources */,
@@ -496,7 +457,6 @@
 				BEC7A9D91CC7E1B500454B3A /* SocketEngineSpec.swift in Sources */,
 				BEC7A9DA1CC7E1B500454B3A /* SocketEventHandler.swift in Sources */,
 				BEC7A9B91CC7E1A700454B3A /* SLKTextView.m in Sources */,
-				BE9931281CC75EC3009F26EB /* ChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

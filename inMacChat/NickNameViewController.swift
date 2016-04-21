@@ -12,6 +12,7 @@ import SwiftyJSON
 import SCLAlertView
 import Instructions
 import SwiftSpinner
+import EZSwiftExtensions
 
 class NickNameViewController: UIViewController, CoachMarksControllerDelegate, CoachMarksControllerDataSource {
 
@@ -34,6 +35,9 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        if KeyChain().token().isEmpty == false {
+            pushVC(ChatViewController())
+        }
         self.socket.connect()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.checkFirstResponder), userInfo: nil, repeats: true)
 
@@ -49,6 +53,9 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
             }
         }
+    }
+    override func viewDidDisappear(animated: Bool) {
+        self.socket.disconnect()
     }
 
     func UI() {
@@ -133,13 +140,19 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
                             let avatar = json["useravatar"].stringValue
                             imageURL = NSURL(string:"http://st.inmac.org/images/avatars/\(avatar)")!
-                            SwiftSpinner.showWithDuration(0.5, title:"Success!")
-                            self.performSegueWithIdentifier("toCodeValidation", sender: nil)
+                            SwiftSpinner.showWithDuration(0.6, title:"Success!")
+                            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC)))
+                            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                                self.performSegueWithIdentifier("toCodeValidation", sender: nil)
+                            }
                             self.socket.disconnect()
                         } else {
                             let message = json["message"].stringValue
-                            print(message)
-                            SwiftSpinner.showWithDuration(0.5, title:"Error!\n User not found")
+                            if message == "USER_NOT_FOUND" {
+                                SwiftSpinner.showWithDuration(0.5, title:"Error!\n User not found")
+                            } else {
+                                SwiftSpinner.showWithDuration(0.5, title:"Unknown Error")
+                            }
                         }
                     }
             }

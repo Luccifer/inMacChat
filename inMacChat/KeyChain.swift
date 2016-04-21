@@ -11,56 +11,90 @@ import KeychainAccess
 
 struct KeyChain {
 
+    public var uuid = NSUUID().UUIDString
+    public var appid = ""
+    public var userid: Int?
+
     //Save
     func saveUsername(username: String) {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["username"] = username
     }
 
     func savePassword(password: String) {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["password"] = password
     }
 
     func saveToken(token: String) {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["token"] = token
     }
 
     func saveUUID(UUID: String) {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["UUID"] = UUID
     }
 
     func saveUserID(userID: String) {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["userID"] = userID
     }
 
 
     // Load
     func username() -> String {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
-        return keychain["username"]!
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
+        if keychain["username"] != nil {
+            return keychain["username"]!
+        } else {
+            return String()
+        }
     }
 
     func password() -> String {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
-        return keychain["password"]!
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
+        if keychain["password"] != nil {
+            return keychain["password"]!
+        } else {
+            return String()
+        }
     }
 
     func UUID() -> String {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
-        return keychain["UUID"]!
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
+        if keychain["UUID"] != nil {
+            return keychain["UUID"]!
+        } else {
+            return String()
+        }
     }
 
     func token() -> String {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
-        return keychain["token"]!
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
+        if keychain["token"] != nil {
+            return keychain["token"]!
+        } else {
+            return String()
+        }
     }
 
     func userID() -> String {
-        let keychain = Keychain(service: "com.eyerise.InMacChat")
-        return keychain["userID"]!
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
+        if keychain["userID"] != nil {
+            return keychain["userID"]!
+        } else {
+            return String()
+        }
+    }
+
+    func logout() {
+        let keychain = Keychain(service: "com.eyerise.inMacChat")
+        keychain["username"] = nil
+        keychain["password"] = nil
+        keychain["UUID"] = nil
+        keychain["token"] = nil
+        keychain["userID"] = nil
+
     }
 }
