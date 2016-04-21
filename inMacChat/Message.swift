@@ -32,11 +32,11 @@ struct Message {
         username = item["username"].stringValue,
         msg = item["msg"].stringValue,
         isPrivate = item["private"].intValue,
-        Avatar = item["useravatar"].stringValue,
+        userAvatar = item["useravatar"].stringValue,
         userlevel = item["userlevel"].intValue,
-        time = NSDate(timeIntervalSince1970: NSNumber(double: item["time"].doubleValue).doubleValue)
+        time = item["time"].intValue
         
-        return Message(userid: userid, id: id, username: username, text: NSMutableString(string: msg), isPrivate: isPrivate > 0, userlevel: userlevel, userAvatar: Avatar, time: time)
+        return Message(userid: userid, id: id, username: username, text: NSMutableString(string: msg), isPrivate: isPrivate > 0, userlevel: userlevel, userAvatar: "http://st.inmac.org/images/avatars/\(userAvatar)", time: NSDate(timeIntervalSince1970: NSNumber(double: Double(time)).doubleValue))
         }
 
 }

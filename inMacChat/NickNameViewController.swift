@@ -116,7 +116,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
         if self.nickFiled.text?.characters.count <= 2 {
             SCLAlertView().showWarning("Invalid login", subTitle: "Please ensure that Login-Field contains your nickname") // Warning
         } else {
-            //SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
+            SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
             SwiftSpinner.show("Connecting to inMac")
             self.socket.emitWithAck("app_verification", ["method": "requestCode", "username": self.nickFiled.text!, "uid": uuid, "appid": appid
                 ])(timeoutAfter: 10) { data in

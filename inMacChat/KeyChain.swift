@@ -9,11 +9,11 @@
 import Foundation
 import KeychainAccess
 
-struct KeyChain {
+public var uuid = NSUUID().UUIDString
+public var appid = ""
+public var userid: Int?
 
-    public var uuid = NSUUID().UUIDString
-    public var appid = ""
-    public var userid: Int?
+struct KeyChain {
 
     //Save
     func saveUsername(username: String) {

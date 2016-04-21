@@ -9,11 +9,14 @@
 import Foundation
 import SwiftyJSON
 import SwiftSpinner
+import Haneke
 
 class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
 
     let socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
+
     var currentUser: User?
+    var messages: [Message] = []
 
     override class func tableViewStyleForCoder(decoder: NSCoder) -> UITableViewStyle {
         return .Plain
@@ -24,6 +27,8 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
         SwiftSpinner.show("Chat init...", animated: true)
         self.commonInit()
         self.UI()
+        self.tableView!.setNeedsLayout()
+        self.tableView!.layoutIfNeeded()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -39,11 +44,27 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
     }
 
     func UI() {
+
+        self.tableView!.snp_remakeConstraints { (make) in
+            make.width.equalTo(self.view)
+            make.height.equalTo(self.view).offset(-60)
+            make.centerX.equalTo(self.view)
+            make.centerY.equalTo(self.view)
+        }
+        
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.tableView?.backgroundView?.backgroundColor = UIColor.whiteColor()
+        self.tableView!.backgroundColor = UIColor.whiteColor()
+        
+        self.tableView!.estimatedRowHeight = 100
+        self.tableView!.rowHeight = UITableViewAutomaticDimension
+
         self.registerPrefixesForAutoCompletion(["@"])
         self.bounces = true
         self.shakeToClearEnabled = true
         self.keyboardPanningEnabled = false
         self.shouldScrollToBottomAfterKeyboardShows = true
+        self.inverted = false
 
         self.textInputbar.autoHideRightButton = true
         self.textInputbar.maxCharCount = 256
@@ -55,9 +76,9 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
 
         if let tableView = self.tableView {
             tableView.separatorStyle = .None
-            tableView.registerClass(MessageTableViewCell.classForCoder(), forCellReuseIdentifier: MessengerCellIdentifier)
+            tableView.registerClass(ChatCell.classForCoder(), forCellReuseIdentifier: "ChatCell")
         }
-        self.autoCompletionView.registerClass(MessageTableViewCell.classForCoder(), forCellReuseIdentifier: AutoCompletionCellIdentifier)
+        self.autoCompletionView.registerClass(ChatCell.classForCoder(), forCellReuseIdentifier: "AutoCompletionCell")
         self.registerPrefixesForAutoCompletion(["@", "#", ":", "+:", "/"])
 
         self.textView.placeholder = "Это чат. Поиск выше!"
@@ -140,21 +161,12 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
                     case "history":
                         if let list = json["list"].array {
                             for item in list {
-                                print(item)
-//                                if let message = MessageNew.parseFromJson(item) {
-//                                    self.messages.append(message)
+                                if let message = Message.parseFromJson(item) {
+                                    self.messages.append(message)
                                 }
+                                self.tableView!.reloadData()
                             }
-                            //
-                            //                            dispatch_async(dispatch_get_main_queue()) {
-                            //                                () -> Void in
-                            //                                self.tableView.reloadData()
-                            //                                if self.messages.count > 0 {
-                            //
-                            //                                }
-                            //                            }
-                            //
-                            //                        }
+                        }
 
                             //                    case "loggedin":
                             //                        if let item: JSON = json["client"] {
@@ -248,26 +260,48 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
                 }
             }
         }
+
+        override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return self.messages.count
+        }
+
+        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            
+            let message = self.messages[indexPath.row]
+            
+            let cell = self.tableView?.dequeueReusableCellWithIdentifier("ChatCell") as! ChatCell
+            
+            
+            cell.avatarImage.hnk_setImageFromURL(NSURL(string: message.userAvatar)!, placeholder: UIImage(named: "noavatar.png"))
+           
+            cell.bodyLabel.text = String(message.text)
+            
+            //name
+            switch (message.userlevel) {
+            case 20:
+                cell.nameLabel.textColor = UIColor(red: 216.0 / 255.0, green: 108.0 / 255.0, blue: 60.0 / 255.0, alpha: 1.0)
+                 cell.nameLabel.text = message.username
+            case 3:
+                cell.nameLabel.textColor = UIColor(red: 29.0 / 255.0, green: 112.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+                 cell.nameLabel.text = message.username
+            case 2:
+                cell.nameLabel.textColor = UIColor(red: 29.0 / 255.0, green: 112.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+                 cell.nameLabel.text = message.username
+            case 1:
+                cell.nameLabel.textColor = UIColor(red: 243.0 / 255.0, green: 0.0 / 255.0, blue: 6.0 / 255.0, alpha: 1.0)
+                 cell.nameLabel.text = message.username
+            default:
+                cell.nameLabel.textColor = UIColor(red: 50.0 / 255.0, green: 117.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
+                 cell.nameLabel.text = message.username
+            }
+            
+            //time
+            let format  = NSDateFormatter()
+            format.timeStyle = NSDateFormatterStyle.ShortStyle
+            format.dateStyle = NSDateFormatterStyle.NoStyle
+            let formatedTime = NSAttributedString(string: format.stringFromDate(message.time!), attributes: [NSFontAttributeName : UIFont.systemFontOfSize(9.0)])
+            cell.timeLabel.attributedText = formatedTime
+            
+            return cell
+        }
 }
-
-
-
-//extension ChatViewController {
-//
-//    func configureDataSource() {
-//
-//        var array = [Message]()
-//
-//        for _ in 0..<100 {
-//            let words = Int((arc4random() % 40)+1)
-//
-//            message.username = LoremIpsum.name()
-//            message.text = LoremIpsum.wordsWithNumber(words)
-//            array.append(message)
-//        }
-//
-//        let reversed = array.reverse()
-//
-//        self.messages.appendContentsOf(reversed)
-//    }
-//}

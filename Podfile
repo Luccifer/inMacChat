@@ -14,6 +14,7 @@ target 'inMacChat' do
     pod 'MMNumberKeyboard'
     pod 'KeychainAccess'
     pod 'EZSwiftExtensions'
+    pod 'Haneke'
 end
 
 post_install do |installer|

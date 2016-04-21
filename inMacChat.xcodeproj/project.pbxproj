@@ -16,11 +16,12 @@
 		BE2D3C4F1CC542A1002DEB94 /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4D1CC542A1002DEB94 /* FloatLabelTextView.swift */; };
 		BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */; };
 		BE30DBAA1CC7D718002B891B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30DBA91CC7D718002B891B /* NewChatViewController.swift */; };
-		BE338FC61CC9395A00954B38 /* MessageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC41CC9395A00954B38 /* MessageStruct.swift */; };
+		BE338FC61CC9395A00954B38 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC41CC9395A00954B38 /* Message.swift */; };
 		BE338FC71CC9395A00954B38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC51CC9395A00954B38 /* User.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
 		BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931491CC76D18009F26EB /* KeyChain.swift */; };
 		BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931631CC796CD009F26EB /* PASImageView.swift */; };
+		BEA5FC321CC96EF500A52D34 /* noavatar.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA5FC311CC96EF500A52D34 /* noavatar.png */; };
 		BEC7A9B51CC7E1A700454B3A /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */; };
 		BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */; };
 		BEC7A9B71CC7E1A700454B3A /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A41CC7E1A700454B3A /* SLKTextInputbar.m */; };
@@ -50,6 +51,7 @@
 		BEC7A9E31CC7E1B500454B3A /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */; };
 		BEC7A9E41CC7E1B500454B3A /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */; };
 		BEC7A9E51CC7E1B500454B3A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */; };
+		BEEB64961CC9520900621B90 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB64951CC9520900621B90 /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,12 +70,13 @@
 		BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		BE30DBA81CC7CC6B002B891B /* inMacChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = inMacChat.entitlements; sourceTree = "<group>"; };
 		BE30DBA91CC7D718002B891B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
-		BE338FC41CC9395A00954B38 /* MessageStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageStruct.swift; sourceTree = "<group>"; };
+		BE338FC41CC9395A00954B38 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BE338FC51CC9395A00954B38 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
 		BE9931491CC76D18009F26EB /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		BE9931611CC78F6E009F26EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE9931631CC796CD009F26EB /* PASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PASImageView.swift; sourceTree = "<group>"; };
+		BEA5FC311CC96EF500A52D34 /* noavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noavatar.png; sourceTree = "<group>"; };
 		BEC7A99F1CC7E1A700454B3A /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
 		BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
 		BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextInput+Implementation.m"; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
 		BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		BEEB64951CC9520900621B90 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 		BE2D3BEF1CC5396C002DEB94 /* inMacChat */ = {
 			isa = PBXGroup;
 			children = (
+				BEA5FC311CC96EF500A52D34 /* noavatar.png */,
 				BE99314B1CC77DEC009F26EB /* Controllers */,
 				BE99314C1CC77DF0009F26EB /* Models */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
@@ -205,8 +210,7 @@
 		BE99314C1CC77DF0009F26EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BE338FC51CC9395A00954B38 /* User.swift */,
-				BE338FC41CC9395A00954B38 /* MessageStruct.swift */,
+				BEEB64941CC951F500621B90 /* JSONmodels */,
 				BE9931491CC76D18009F26EB /* KeyChain.swift */,
 				BE9931631CC796CD009F26EB /* PASImageView.swift */,
 			);
@@ -287,6 +291,16 @@
 			path = inMacChat/SocketIO;
 			sourceTree = "<group>";
 		};
+		BEEB64941CC951F500621B90 /* JSONmodels */ = {
+			isa = PBXGroup;
+			children = (
+				BE338FC51CC9395A00954B38 /* User.swift */,
+				BE338FC41CC9395A00954B38 /* Message.swift */,
+				BEEB64951CC9520900621B90 /* ChatCell.swift */,
+			);
+			name = JSONmodels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +374,7 @@
 				BE2D3BFB1CC5396C002DEB94 /* LaunchScreen.storyboard in Resources */,
 				BE2D3BF81CC5396C002DEB94 /* Assets.xcassets in Resources */,
 				BE2D3BF61CC5396C002DEB94 /* Main.storyboard in Resources */,
+				BEA5FC321CC96EF500A52D34 /* noavatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +457,7 @@
 				BEC7A9D71CC7E1B500454B3A /* SocketEngineClient.swift in Sources */,
 				BEC7A9E21CC7E1B500454B3A /* SocketStringReader.swift in Sources */,
 				BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */,
-				BE338FC61CC9395A00954B38 /* MessageStruct.swift in Sources */,
+				BE338FC61CC9395A00954B38 /* Message.swift in Sources */,
 				BEC7A9D41CC7E1B500454B3A /* SocketAckManager.swift in Sources */,
 				BEC7A9D81CC7E1B500454B3A /* SocketEnginePacketType.swift in Sources */,
 				BEC7A9D51CC7E1B500454B3A /* SocketAnyEvent.swift in Sources */,
@@ -451,6 +466,7 @@
 				BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */,
 				BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */,
 				BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */,
+				BEEB64961CC9520900621B90 /* ChatCell.swift in Sources */,
 				BEC7A9DD1CC7E1B500454B3A /* SocketIOClientOption.swift in Sources */,
 				BEC7A9BA1CC7E1A700454B3A /* SLKTextViewController.m in Sources */,
 				BEC7A9DE1CC7E1B500454B3A /* SocketIOClientStatus.swift in Sources */,
@@ -581,7 +597,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8eba99a9-77a5-4448-aaec-728f68a7e4df";
+				PROVISIONING_PROFILE = "2801848a-1d90-4227-8291-80148e222239";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -601,7 +617,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "747ed2cb-8553-4a27-a811-2251ec091d77";
+				PROVISIONING_PROFILE = "c38483d7-235a-458c-a503-be68b5c52a90";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 			};
 			name = Release;
