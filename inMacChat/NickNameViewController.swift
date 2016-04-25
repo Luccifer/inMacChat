@@ -88,31 +88,57 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
         self.nextButton.addTarget(self, action: #selector(self.requestCode), forControlEvents: UIControlEvents.TouchUpInside)
 
-        self.nickFiled.snp_makeConstraints { (make) in
-            make.centerY.equalTo(self.view).offset(-20)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(250)
-            make.height.equalTo(50)
-        }
+        if UIDevice.deviceModelReadable() == "iPhone 4" || UIDevice.deviceModelReadable() == "iPhone 4S" {
+            
+            self.nickFiled.snp_makeConstraints { (make) in
+                make.centerY.equalTo(self.view).offset(-100)
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(250)
+                make.height.equalTo(50)
+            }
+            
+            self.nextButton.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.nickFiled).offset(65)
+                make.width.equalTo(100)
+                make.height.equalTo(40)
+            }
+            
+            self.pointOfInterest.snp_makeConstraints(closure: { (make) in
+                make.width.equalTo(0)
+                make.height.equalTo(0)
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.view)
+            })
+            
+        } else {
+            
+            self.nickFiled.snp_makeConstraints { (make) in
+                make.centerY.equalTo(self.view).offset(-20)
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(250)
+                make.height.equalTo(50)
+            }
 
-        self.nextButton.snp_makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.nickFiled).offset(70)
-            make.width.equalTo(100)
-            make.height.equalTo(40)
-        }
+            self.nextButton.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.nickFiled).offset(70)
+                make.width.equalTo(100)
+                make.height.equalTo(40)
+            }
 
-        self.pointOfInterest.snp_makeConstraints(closure: { (make) in
-            make.width.equalTo(0)
-            make.height.equalTo(0)
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.view)
-        })
+            self.pointOfInterest.snp_makeConstraints(closure: { (make) in
+                make.width.equalTo(0)
+                make.height.equalTo(0)
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.view)
+            })
+        }
 
     }
 
     func requestCode() {
-
+        self.nickFiled.resignFirstResponder()
         if self.nickFiled.text?.characters.count <= 2 {
             SCLAlertView().showWarning("Invalid login", subTitle: "Please ensure that Login-Field contains your nickname") // Warning
         } else {
@@ -161,7 +187,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
     func numberOfCoachMarksForCoachMarksController(coachMarkController: CoachMarksController)
         -> Int {
-            return 3
+            return 2
     }
 
     func coachMarksController(coachMarksController: CoachMarksController, coachMarksForIndex: Int)
@@ -179,11 +205,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
 
             case 1:
                 coachMark = coachMarksController.coachMarkForView(self.nickFiled)
-                coachMark.arrowOrientation = .Top
-
-            case 2:
-                coachMark = coachMarksController.coachMarkForView(self.pointOfInterest)
-                coachMark.arrowOrientation = .Bottom
+                coachMark.arrowOrientation = . Bottom
 
             default:
                 coachMark = coachMarksController.coachMarkForView()
@@ -205,16 +227,10 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
                 coachViews.bodyView.nextLabel.text = "Ok!"
 
             case 1:
-                coachViews.bodyView.hintLabel.text = "Type your login from inMac.org"
+                coachViews.bodyView.hintLabel.text = "Type your login\n from inMac.org"
                 coachViews.bodyView.nextLabel.text = "Done"
                 self.nickFiled.becomeFirstResponder()
-
-            case 2:
-                coachViews.bodyView.hintLabel.text = "You are good to go!"
-                coachViews.bodyView.nextLabel.text = "Tnx!"
-                self.nickFiled.resignFirstResponder()
-
-
+                
             default: break
             }
 

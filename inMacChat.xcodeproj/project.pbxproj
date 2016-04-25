@@ -19,12 +19,6 @@
 		BE338FC61CC9395A00954B38 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC41CC9395A00954B38 /* Message.swift */; };
 		BE338FC71CC9395A00954B38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC51CC9395A00954B38 /* User.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
-		BE5A339B1CC97CAA00AA18EB /* BBCodeString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A338E1CC97CAA00AA18EB /* BBCodeString.m */; };
-		BE5A339C1CC97CAA00AA18EB /* BBAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A33911CC97CAA00AA18EB /* BBAttribute.m */; };
-		BE5A339D1CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A33941CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.m */; };
-		BE5A339E1CC97CAA00AA18EB /* BBCodeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A33951CC97CAA00AA18EB /* BBCodeParser.m */; };
-		BE5A339F1CC97CAA00AA18EB /* BBElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A33981CC97CAA00AA18EB /* BBElement.m */; };
-		BE5A33A01CC97CAA00AA18EB /* BBParsingElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A339A1CC97CAA00AA18EB /* BBParsingElement.m */; };
 		BE5A33A21CC9835800AA18EB /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5A33A11CC9835800AA18EB /* TextFormatter.swift */; };
 		BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931491CC76D18009F26EB /* KeyChain.swift */; };
 		BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931631CC796CD009F26EB /* PASImageView.swift */; };
@@ -58,6 +52,7 @@
 		BEC7A9E31CC7E1B500454B3A /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */; };
 		BEC7A9E41CC7E1B500454B3A /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */; };
 		BEC7A9E51CC7E1B500454B3A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */; };
+		BED0DCA11CCE2CA500051EA5 /* AutoCompletionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0DCA01CCE2CA500051EA5 /* AutoCompletionCell.swift */; };
 		BEEB64961CC9520900621B90 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB64951CC9520900621B90 /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +60,7 @@
 		910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inMacChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F3F48EA804465DAD4A47BF /* Pods-inMacChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inMacChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat.release.xcconfig"; sourceTree = "<group>"; };
 		BE26B345A36C61CCA2BF9738 /* Pods-inMacChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inMacChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat.debug.xcconfig"; sourceTree = "<group>"; };
-		BE2D3BED1CC5396C002DEB94 /* inMacChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inMacChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2D3BED1CC5396C002DEB94 /* MacRu.Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRu.Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		BE2D3BF51CC5396C002DEB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,23 +75,8 @@
 		BE338FC41CC9395A00954B38 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BE338FC51CC9395A00954B38 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
-		BE5A338D1CC97CAA00AA18EB /* BBCodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCodeString.h; sourceTree = "<group>"; };
-		BE5A338E1CC97CAA00AA18EB /* BBCodeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCodeString.m; sourceTree = "<group>"; };
-		BE5A338F1CC97CAA00AA18EB /* BBCodeStringDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCodeStringDelegate.h; sourceTree = "<group>"; };
-		BE5A33901CC97CAA00AA18EB /* BBAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBAttribute.h; sourceTree = "<group>"; };
-		BE5A33911CC97CAA00AA18EB /* BBAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAttribute.m; sourceTree = "<group>"; };
-		BE5A33921CC97CAA00AA18EB /* BBCodeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCodeParser.h; sourceTree = "<group>"; };
-		BE5A33931CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+BBCodeString.h"; sourceTree = "<group>"; };
-		BE5A33941CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+BBCodeString.m"; sourceTree = "<group>"; };
-		BE5A33951CC97CAA00AA18EB /* BBCodeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCodeParser.m; sourceTree = "<group>"; };
-		BE5A33961CC97CAA00AA18EB /* BBCodeParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCodeParserDelegate.h; sourceTree = "<group>"; };
-		BE5A33971CC97CAA00AA18EB /* BBElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBElement.h; sourceTree = "<group>"; };
-		BE5A33981CC97CAA00AA18EB /* BBElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBElement.m; sourceTree = "<group>"; };
-		BE5A33991CC97CAA00AA18EB /* BBParsingElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBParsingElement.h; sourceTree = "<group>"; };
-		BE5A339A1CC97CAA00AA18EB /* BBParsingElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBParsingElement.m; sourceTree = "<group>"; };
 		BE5A33A11CC9835800AA18EB /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
 		BE9931491CC76D18009F26EB /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
-		BE9931611CC78F6E009F26EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE9931631CC796CD009F26EB /* PASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PASImageView.swift; sourceTree = "<group>"; };
 		BEA5FC311CC96EF500A52D34 /* noavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noavatar.png; sourceTree = "<group>"; };
 		BEC7A99F1CC7E1A700454B3A /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
@@ -140,6 +120,7 @@
 		BEC7A9D01CC7E1B500454B3A /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
 		BEC7A9D11CC7E1B500454B3A /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		BEC7A9D21CC7E1B500454B3A /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		BED0DCA01CCE2CA500051EA5 /* AutoCompletionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompletionCell.swift; sourceTree = "<group>"; };
 		BEEB64951CC9520900621B90 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,10 +148,8 @@
 		B4FD9B524FE051EF3661CE8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE5A338C1CC9793700AA18EB /* BBCodeString */,
 				BEC7A9BF1CC7E1B500454B3A /* SocketIO */,
 				BEC7A99E1CC7E1A700454B3A /* SlackTextViewController */,
-				BE9931611CC78F6E009F26EB /* QuartzCore.framework */,
 				BE2D3C4C1CC54290002DEB94 /* FloatLabel */,
 				910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */,
 			);
@@ -190,7 +169,7 @@
 		BE2D3BEE1CC5396C002DEB94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE2D3BED1CC5396C002DEB94 /* inMacChat.app */,
+				BE2D3BED1CC5396C002DEB94 /* MacRu.Chat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,7 +181,6 @@
 				BE99314B1CC77DEC009F26EB /* Controllers */,
 				BE99314C1CC77DF0009F26EB /* Models */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
-				BE9931601CC785F5009F26EB /* Shared */,
 				BE2D3BF41CC5396C002DEB94 /* Main.storyboard */,
 				BE2D3BF71CC5396C002DEB94 /* Assets.xcassets */,
 				BE2D3BF91CC5396C002DEB94 /* LaunchScreen.storyboard */,
@@ -218,27 +196,6 @@
 				BE2D3C4E1CC542A1002DEB94 /* FloatLabelTextField.swift */,
 			);
 			name = FloatLabel;
-			sourceTree = "<group>";
-		};
-		BE5A338C1CC9793700AA18EB /* BBCodeString */ = {
-			isa = PBXGroup;
-			children = (
-				BE5A338D1CC97CAA00AA18EB /* BBCodeString.h */,
-				BE5A338E1CC97CAA00AA18EB /* BBCodeString.m */,
-				BE5A338F1CC97CAA00AA18EB /* BBCodeStringDelegate.h */,
-				BE5A33901CC97CAA00AA18EB /* BBAttribute.h */,
-				BE5A33911CC97CAA00AA18EB /* BBAttribute.m */,
-				BE5A33921CC97CAA00AA18EB /* BBCodeParser.h */,
-				BE5A33931CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.h */,
-				BE5A33941CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.m */,
-				BE5A33951CC97CAA00AA18EB /* BBCodeParser.m */,
-				BE5A33961CC97CAA00AA18EB /* BBCodeParserDelegate.h */,
-				BE5A33971CC97CAA00AA18EB /* BBElement.h */,
-				BE5A33981CC97CAA00AA18EB /* BBElement.m */,
-				BE5A33991CC97CAA00AA18EB /* BBParsingElement.h */,
-				BE5A339A1CC97CAA00AA18EB /* BBParsingElement.m */,
-			);
-			name = BBCodeString;
 			sourceTree = "<group>";
 		};
 		BE99314B1CC77DEC009F26EB /* Controllers */ = {
@@ -270,13 +227,6 @@
 				BE2D3C2B1CC54245002DEB94 /* inMacChat-Bridging-Header.h */,
 			);
 			name = "Support Files";
-			sourceTree = "<group>";
-		};
-		BE9931601CC785F5009F26EB /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Shared;
 			sourceTree = "<group>";
 		};
 		BEC7A99E1CC7E1A700454B3A /* SlackTextViewController */ = {
@@ -342,6 +292,7 @@
 				BE338FC51CC9395A00954B38 /* User.swift */,
 				BE338FC41CC9395A00954B38 /* Message.swift */,
 				BEEB64951CC9520900621B90 /* ChatCell.swift */,
+				BED0DCA01CCE2CA500051EA5 /* AutoCompletionCell.swift */,
 			);
 			name = JSONmodels;
 			sourceTree = "<group>";
@@ -366,7 +317,7 @@
 			);
 			name = inMacChat;
 			productName = inMacChat;
-			productReference = BE2D3BED1CC5396C002DEB94 /* inMacChat.app */;
+			productReference = BE2D3BED1CC5396C002DEB94 /* MacRu.Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -479,12 +430,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC7A9E41CC7E1B500454B3A /* SwiftRegex.swift in Sources */,
-				BE5A339E1CC97CAA00AA18EB /* BBCodeParser.m in Sources */,
 				BEC7A9E31CC7E1B500454B3A /* SocketTypes.swift in Sources */,
 				BE2D3BF31CC5396C002DEB94 /* NickNameViewController.swift in Sources */,
 				BEC7A9BD1CC7E1A700454B3A /* UIScrollView+SLKAdditions.m in Sources */,
 				BEC7A9B71CC7E1A700454B3A /* SLKTextInputbar.m in Sources */,
 				BEC7A9DF1CC7E1B500454B3A /* SocketLogger.swift in Sources */,
+				BED0DCA11CCE2CA500051EA5 /* AutoCompletionCell.swift in Sources */,
 				BEC7A9BC1CC7E1A700454B3A /* UIResponder+SLKAdditions.m in Sources */,
 				BE2D3C501CC542A1002DEB94 /* FloatLabelTextField.swift in Sources */,
 				BEC7A9B51CC7E1A700454B3A /* SLKInputAccessoryView.m in Sources */,
@@ -503,21 +454,16 @@
 				BEC7A9D71CC7E1B500454B3A /* SocketEngineClient.swift in Sources */,
 				BEC7A9E21CC7E1B500454B3A /* SocketStringReader.swift in Sources */,
 				BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */,
-				BE5A33A01CC97CAA00AA18EB /* BBParsingElement.m in Sources */,
 				BE338FC61CC9395A00954B38 /* Message.swift in Sources */,
 				BEC7A9D41CC7E1B500454B3A /* SocketAckManager.swift in Sources */,
-				BE5A339C1CC97CAA00AA18EB /* BBAttribute.m in Sources */,
 				BEC7A9D81CC7E1B500454B3A /* SocketEnginePacketType.swift in Sources */,
-				BE5A339F1CC97CAA00AA18EB /* BBElement.m in Sources */,
 				BEC7A9D51CC7E1B500454B3A /* SocketAnyEvent.swift in Sources */,
 				BE5A33A21CC9835800AA18EB /* TextFormatter.swift in Sources */,
 				BEC7A9BE1CC7E1A700454B3A /* UIView+SLKAdditions.m in Sources */,
 				BEC7A9DC1CC7E1B500454B3A /* SocketIOClient.swift in Sources */,
 				BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */,
 				BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */,
-				BE5A339B1CC97CAA00AA18EB /* BBCodeString.m in Sources */,
 				BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */,
-				BE5A339D1CC97CAA00AA18EB /* NSMutableAttributedString+BBCodeString.m in Sources */,
 				BEEB64961CC9520900621B90 /* ChatCell.swift in Sources */,
 				BEC7A9DD1CC7E1B500454B3A /* SocketIOClientOption.swift in Sources */,
 				BEC7A9BA1CC7E1A700454B3A /* SLKTextViewController.m in Sources */,
@@ -587,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -627,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -648,7 +594,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacRu.Chat;
 				PROVISIONING_PROFILE = "2801848a-1d90-4227-8291-80148e222239";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -668,7 +614,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacRu.Chat;
 				PROVISIONING_PROFILE = "c38483d7-235a-458c-a503-be68b5c52a90";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 			};

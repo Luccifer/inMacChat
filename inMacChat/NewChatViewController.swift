@@ -18,18 +18,23 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
 
     var currentUser: User?
     var messages: [Message] = []
-
+    var usersArray: [String] = []
+    var searchResult: [AnyObject]?
+    var editingMessage: Message?
+    var tappedNick: String?
+    
     override class func tableViewStyleForCoder(decoder: NSCoder) -> UITableViewStyle {
         return .Plain
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.hidden = true
+        
         SwiftSpinner.show("Chat init...", animated: true)
         self.commonInit()
         self.UI()
-        //        self.tableView!.setNeedsLayout()
-        //        self.tableView!.layoutIfNeeded()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -46,11 +51,9 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
 
     func UI() {
 
-        self.tableView!.snp_remakeConstraints { (make) in
-            make.width.equalTo(self.view)
-            make.height.equalTo(self.view).offset(-60)
+        self.autoCompletionView.snp_remakeConstraints { (make) in
             make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.view)
+            make.width.equalTo(self.view)
         }
 
         self.view.backgroundColor = UIColor.whiteColor()
@@ -79,7 +82,7 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
             tableView.separatorStyle = .None
             tableView.registerClass(ChatCell.classForCoder(), forCellReuseIdentifier: "ChatCell")
         }
-        self.autoCompletionView.registerClass(ChatCell.classForCoder(), forCellReuseIdentifier: "AutoCompletionCell")
+        self.autoCompletionView.registerClass(AutoCompletionCell.classForCoder(), forCellReuseIdentifier: "AutoCompletionCell")
         self.registerPrefixesForAutoCompletion(["@", "#", ":", "+:", "/"])
 
         self.textView.placeholder = "Это чат. Поиск выше!"
@@ -164,70 +167,41 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
                             for item in list {
                                 if let message = Message.parseFromJson(item) {
                                     self.messages.append(message)
+                                    if !self.usersArray.contains(message.username) {
+                                        self.usersArray.append(message.username)
+                                    }
                                 }
                                 self.tableView!.reloadData()
                             }
                         }
 
-                        //                    case "loggedin":
-                        //                        if let item: JSON = json["client"] {
-                        //                            if let user = User.parseFromJson(item) {
-                        //                                print(user.isMember)
-                        //                            }
-                        //                        }
-                        //
-                        //
-                        //                    case "history":
-                        //                        if let list = json["list"].array {
-                        //                            for item in list {
-                        //                                if let message = MessageNew.parseFromJson(item) {
-                        //                                    self.messages.append(message)
-                        //                                }
-                        //                            }
-                        //
-                        //                            dispatch_async(dispatch_get_main_queue()) {
-                        //                                () -> Void in
-                        //                                self.tableView.reloadData()
-                        //                                if self.messages.count > 0 {
-                        //
-                        //                                }
-                        //                            }
-                        //
-                        //                        }
-                        //
-                        //                    case "message_writes":
-                        //                        let status = json["status"].intValue
-                        //                        let username = json["username"].stringValue
-                        //                        if status == 1 {
-                        //
-                        //                            self.typingIndicatorView.insertUsername("\(username)")
-                        //                        }
-                        //
-                        //                    case "message_new":
-                        //                        if let message = MessageNew.parseFromJson(json) {
-                        //
-                        //                            self.messages.append(message)
-                        //                            self.usersArray.append(message.username)
-                        //                            self.usersArray = self.uniq(self.usersArray)
-                        //                            print(self.usersArray)
-                        //
-                        //                            let index = NSIndexPath(forRow: self.tableView.numberOfRowsInSection(0) - 1,
-                        //                                                    inSection: 0)
-                        //
-                        //                            self.tableView.insertRowsAtIndexPaths([index], withRowAnimation: UITableViewRowAnimation.Automatic)
-                        //                            //                            self.scrollToBottomMessage()
-                        //                        }
-                        //
-                        //                        //                        dispatch_async(dispatch_get_main_queue()) {
-                        //                        //                            () -> Void in
-                        //                        //                            self.tableView.reloadData()
-                        //                        //                            if self.messages.count > 0 {
-                        //                        //
-                        //                        //                            }
-                        //                        //                             self.scrollToBottomMessage()
-                        //                        //                        }
-                        //
-                        //
+                    case "message_new":
+                        if let message = Message.parseFromJson(json) {
+
+                            self.messages.append(message)
+
+                            if !self.usersArray.contains(message.username) {
+                                self.usersArray.append(message.username)
+                            }
+
+                            let index = NSIndexPath(forRow: self.tableView!.numberOfRowsInSection(0) - 1, inSection: 0)
+                            self.tableView!.beginUpdates()
+                            self.tableView!.insertRowsAtIndexPaths([index], withRowAnimation: .Automatic)
+                            self.tableView!.endUpdates()
+                        }
+
+
+                    case "message_writes":
+                        let status = json["status"].intValue
+                        let username = json["username"].stringValue
+                        if status == 1 {
+
+                            self.typingIndicatorView!.insertUsername("\(username)")
+                        }
+
+
+
+
                         //                    case "message_delete":
                         //                        if let id = json["id"].string, let username = json["username"].string {
                         //                            if let index = self.messages.indexOf({$0.id == id}) {
@@ -263,23 +237,50 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.messages.count
+        
+        if tableView == self.tableView {
+            return self.messages.count
+        }
+        else {
+            if let searchResult = self.searchResult {
+                return searchResult.count
+            }
+        }
+        
+        return 0
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
+        if tableView == self.tableView {
+            return self.messageCellForRowAtIndexPath(indexPath)
+        }
+        else {
+            return self.autoCompletionCellForRowAtIndexPath(indexPath)
+        }
+    }
+    
+    func messageCellForRowAtIndexPath(indexPath: NSIndexPath) -> ChatCell {
+        
         let message = self.messages[indexPath.row]
-
+        
         let cell = self.tableView?.dequeueReusableCellWithIdentifier("ChatCell") as! ChatCell
-
-
+        
+        cell.indexPath = indexPath
+        
+        if cell.gestureRecognizers?.count == nil {
+            let longPress = UILongPressGestureRecognizer(target: self, action: #selector(ChatViewController.didLongPressCell(_:)))
+            let shortPress = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.didShortPressCell(_:)))
+            self.tappedNick = cell.nameLabel.text
+            cell.addGestureRecognizer(shortPress)
+            cell.addGestureRecognizer(longPress)
+        }
+        
         cell.avatarImage.hnk_setImageFromURL(NSURL(string: message.userAvatar)!, placeholder: UIImage(named: "noavatar.png"))
-
-
+        
+        
         cell.bodyLabel.attributedText = TextFormatter().completeText(message.text)
-        //        cell.bodyLabel.text = String(message.text)
-
-        //name
+        
         switch (message.userlevel) {
         case 20:
             cell.nameLabel.textColor = UIColor(red: 216.0 / 255.0, green: 108.0 / 255.0, blue: 60.0 / 255.0, alpha: 1.0)
@@ -297,22 +298,165 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
             cell.nameLabel.textColor = UIColor(red: 50.0 / 255.0, green: 117.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
             cell.nameLabel.text = message.username
         }
-
+        
         //time
         let format  = NSDateFormatter()
         format.timeStyle = NSDateFormatterStyle.ShortStyle
         format.dateStyle = NSDateFormatterStyle.NoStyle
         let formatedTime = NSAttributedString(string: format.stringFromDate(message.time!), attributes: [NSFontAttributeName : UIFont.systemFontOfSize(9.0)])
         cell.timeLabel.attributedText = formatedTime
+        cell.transform = self.tableView!.transform
+        
+        return cell
 
+    }
+    
+    func autoCompletionCellForRowAtIndexPath(indexPath: NSIndexPath) -> AutoCompletionCell {
+        
+        let cell = self.autoCompletionView.dequeueReusableCellWithIdentifier("AutoCompletionCell") as! AutoCompletionCell
+        
+        cell.indexPath = indexPath
+        cell.selectionStyle = .Default
+        
+        let text = self.searchResult![indexPath.row]
+        
+//        else if prefix == ":" || prefix == "+:" {
+//            text = ":\(text):"
+//        }
+
+        cell.nameLabel.text = text as? String
         return cell
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        
+         if tableView == self.tableView {
+            return UITableViewAutomaticDimension
+         }else {
+            return 40
+        }
     }
 
     override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if tableView == self.autoCompletionView {
+            
+            guard let searchResult = self.searchResult as? [String] else {
+                return
+            }
+            
+            var item = searchResult[indexPath.row]
+            
+            if self.foundPrefix == "@" && self.foundPrefixRange.location == 0 {
+                item += ":"
+            }
+            else if self.foundPrefix == ":" || self.foundPrefix == "+:" {
+                item += ":"
+            }
+            
+            item += " "
+            
+            self.acceptAutoCompletionWithString("[b]\(item)[/b]:", keepPrefix: false)
+        }
+    }
+    
+    override func didChangeAutoCompletionPrefix(prefix: String, andWord word: String) {
+
+        
+        var array: [AnyObject]?
+        
+        self.searchResult = nil
+        
+        if prefix == "@" {
+            if word.characters.count > 0 {
+                array = (self.usersArray as NSArray).filteredArrayUsingPredicate(NSPredicate(format: "self BEGINSWITH[c] %@", word))
+            }
+            else {
+                array = self.usersArray
+            }
+        }
+        
+        var show = false
+
+        if  array?.count > 0 {
+            self.searchResult = (array! as NSArray).sortedArrayUsingSelector(#selector(NSString.localizedCaseInsensitiveCompare(_:)))
+            show = (self.searchResult?.count > 0)
+        }
+        
+        self.showAutoCompletionView(show)
+    }
+    
+    override func heightForAutoCompletionView() -> CGFloat {
+        
+        guard let searchResult = self.searchResult else {
+            return 0
+        }
+        
+        let cellHeight = self.autoCompletionView.delegate?.tableView!(self.autoCompletionView, heightForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+        
+        guard let height = cellHeight else {
+            return 0
+        }
+        return height * CGFloat(searchResult.count)
+    }
+    
+    func didLongPressCell(gesture: UIGestureRecognizer) {
+        
+        guard let view = gesture.view else {
+            return
+        }
+        
+        if gesture.state != .Began {
+            return
+        }
+        
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+            alertController.modalPresentationStyle = .Popover
+            alertController.popoverPresentationController?.sourceView = view.superview
+            alertController.popoverPresentationController?.sourceRect = view.frame
+            
+            alertController.addAction(UIAlertAction(title: "Edit Message", style: .Default, handler: { [unowned self] (action) -> Void in
+                self.editCellMessage(gesture)
+                }))
+        
+        alertController.addAction(UIAlertAction(title: "Delete Message", style: .Destructive, handler: { [unowned self] (action) -> Void in
+            self.editCellMessage(gesture)
+            }))
+
+        
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+            
+            self.navigationController?.presentViewController(alertController, animated: true, completion: nil)
+
+    }
+    
+    func didShortPressCell(gesture: UIGestureRecognizer) {
+        let text = self.textInputbar.textView.text
+        let newText = text + "[b]\(self.tappedNick)[/b],"
+        self.textInputbar.textView.text = newText
+    }
+
+
+    func editCellMessage(gesture: UIGestureRecognizer) {
+        
+        guard let cell = gesture.view as? ChatCell else {
+            
+            return
+        }
+        
+        self.editingMessage = self.messages[cell.indexPath!.row]
+        self.editText(self.editingMessage!.text)
+        
+        self.tableView!.scrollToRowAtIndexPath(cell.indexPath!, atScrollPosition: .Bottom, animated: true)
+    }
+    
+    func deleteCellMessage() {
+        
+    }
+    
+    
 }

@@ -13,6 +13,7 @@ import SwiftyJSON
 import MMNumberKeyboard
 import Instructions
 import SwiftSpinner
+import EZSwiftExtensions
 
 public var imageURL = NSURL()
 
@@ -102,39 +103,77 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
         self.nextButton.setTitle("Next", forState: UIControlState.Normal)
         self.nextButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
 
-        self.codeFiled.snp_makeConstraints { (make) in
-            make.centerY.equalTo(self.view).offset(-20)
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(250)
-            make.height.equalTo(50)
-        }
+        if UIDevice.deviceModelReadable() == "iPhone 4" || UIDevice.deviceModelReadable() == "iPhone 4S" {
+            
+            self.avatarView.hidden = true
+            
+            self.pointOfInterest.snp_makeConstraints(closure: { (make) in
+                make.width.equalTo(0)
+                make.height.equalTo(0)
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.view)
+            })
+            
+            
+            self.nickLabel.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(self.nickLabel.intrinsicContentSize().width)
+                make.height.equalTo(45)
+                make.top.equalTo(self.view).offset(60)
+            }
+            
+            self.codeFiled.snp_makeConstraints { (make) in
+                make.top.equalTo(self.nickLabel).offset(35)
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(250)
+                make.height.equalTo(50)
+            }
+            
+            self.nextButton.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.top.equalTo(self.codeFiled.snp_bottom).offset(25)
+                make.width.equalTo(100)
+                make.height.equalTo(40)
+            }
 
-        self.nextButton.snp_makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.codeFiled).offset(70)
-            make.width.equalTo(100)
-            make.height.equalTo(40)
-        }
+            
+        } else {
 
-        self.pointOfInterest.snp_makeConstraints(closure: { (make) in
-            make.width.equalTo(0)
-            make.height.equalTo(0)
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.view)
-        })
+            self.codeFiled.snp_makeConstraints { (make) in
+                make.centerY.equalTo(self.view).offset(-20)
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(250)
+                make.height.equalTo(50)
+            }
 
-        self.avatarView.snp_makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.bottom.equalTo(self.codeFiled).offset(-150)
-            make.height.equalTo(100)
-            make.width.equalTo(100)
-        }
+            self.nextButton.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.codeFiled).offset(70)
+                make.width.equalTo(100)
+                make.height.equalTo(40)
+            }
 
-        self.nickLabel.snp_makeConstraints { (make) in
-            make.centerX.equalTo(self.view)
-            make.width.equalTo(self.nickLabel.intrinsicContentSize().width)
-            make.height.equalTo(45)
-            make.centerY.equalTo(self.codeFiled).offset(-80)
+            self.pointOfInterest.snp_makeConstraints(closure: { (make) in
+                make.width.equalTo(0)
+                make.height.equalTo(0)
+                make.centerX.equalTo(self.view)
+                make.centerY.equalTo(self.view)
+            })
+
+
+            self.nickLabel.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(self.nickLabel.intrinsicContentSize().width)
+                make.height.equalTo(45)
+                make.centerY.equalTo(self.codeFiled.snp_top).offset(-40)
+            }
+
+            self.avatarView.snp_makeConstraints { (make) in
+                make.centerX.equalTo(self.view)
+                make.bottom.equalTo(self.nickLabel.snp_top).offset(-10)
+                make.height.equalTo(100)
+                make.width.equalTo(100)
+            }
         }
     }
 
@@ -155,6 +194,7 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
             switch(coachMarksForIndex) {
             case 0:
                 coachMark = coachMarksController.coachMarkForView(self.codeFiled)
+                coachMark.arrowOrientation = . Top
 
 
             default:
