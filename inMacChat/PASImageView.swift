@@ -185,7 +185,7 @@ public class PASImageView: UIView, NSURLSessionDownloadDelegate {
 
         self.addSubview(containerImageView)
         self.addSubview(progressContainer)
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "handleSingleTap:"))
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PASImageView.handleSingleTap(_:))))
 
         setConstraints()
 

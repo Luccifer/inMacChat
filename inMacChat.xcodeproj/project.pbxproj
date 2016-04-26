@@ -20,9 +20,17 @@
 		BE338FC71CC9395A00954B38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE338FC51CC9395A00954B38 /* User.swift */; };
 		BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */; };
 		BE5A33A21CC9835800AA18EB /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5A33A11CC9835800AA18EB /* TextFormatter.swift */; };
+		BE7F67EC1CCFAA2B006F8C43 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F67EA1CCFAA2B006F8C43 /* Realm.framework */; };
+		BE7F67ED1CCFAA2B006F8C43 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F67EA1CCFAA2B006F8C43 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE7F67EE1CCFAA2B006F8C43 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F67EB1CCFAA2B006F8C43 /* RealmSwift.framework */; };
+		BE7F67EF1CCFAA2B006F8C43 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F67EB1CCFAA2B006F8C43 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE7F67F51CCFAC9C006F8C43 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F67F41CCFAC9C006F8C43 /* ChatModel.swift */; };
 		BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931491CC76D18009F26EB /* KeyChain.swift */; };
 		BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9931631CC796CD009F26EB /* PASImageView.swift */; };
 		BEA5FC321CC96EF500A52D34 /* noavatar.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA5FC311CC96EF500A52D34 /* noavatar.png */; };
+		BEAE26691CCFCE5E008848C4 /* ArchiveChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE26681CCFCE5E008848C4 /* ArchiveChatViewController.swift */; };
+		BEAE266B1CCFD1C5008848C4 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE266A1CCFD1C5008848C4 /* ArchiveCell.swift */; };
+		BEAE26711CCFDA29008848C4 /* mark.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAE26701CCFDA29008848C4 /* mark.png */; };
 		BEC7A9B51CC7E1A700454B3A /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */; };
 		BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */; };
 		BEC7A9B71CC7E1A700454B3A /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A9A41CC7E1A700454B3A /* SLKTextInputbar.m */; };
@@ -56,11 +64,26 @@
 		BEEB64961CC9520900621B90 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB64951CC9520900621B90 /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BE7F67F01CCFAA2B006F8C43 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE7F67EF1CCFAA2B006F8C43 /* RealmSwift.framework in Embed Frameworks */,
+				BE7F67ED1CCFAA2B006F8C43 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		910549574D1DDEC97352CAF6 /* Pods_inMacChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inMacChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F3F48EA804465DAD4A47BF /* Pods-inMacChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inMacChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat.release.xcconfig"; sourceTree = "<group>"; };
 		BE26B345A36C61CCA2BF9738 /* Pods-inMacChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inMacChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat.debug.xcconfig"; sourceTree = "<group>"; };
-		BE2D3BED1CC5396C002DEB94 /* MacRu.Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRu.Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2D3BED1CC5396C002DEB94 /* inMacChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inMacChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		BE2D3BF51CC5396C002DEB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,9 +99,15 @@
 		BE338FC51CC9395A00954B38 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeValidationViewController.swift; sourceTree = "<group>"; };
 		BE5A33A11CC9835800AA18EB /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		BE7F67EA1CCFAA2B006F8C43 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = inMacChat/Realm.framework; sourceTree = "<group>"; };
+		BE7F67EB1CCFAA2B006F8C43 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = inMacChat/RealmSwift.framework; sourceTree = "<group>"; };
+		BE7F67F41CCFAC9C006F8C43 /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		BE9931491CC76D18009F26EB /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		BE9931631CC796CD009F26EB /* PASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PASImageView.swift; sourceTree = "<group>"; };
 		BEA5FC311CC96EF500A52D34 /* noavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noavatar.png; sourceTree = "<group>"; };
+		BEAE26681CCFCE5E008848C4 /* ArchiveChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveChatViewController.swift; sourceTree = "<group>"; };
+		BEAE266A1CCFD1C5008848C4 /* ArchiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
+		BEAE26701CCFDA29008848C4 /* mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark.png; sourceTree = "<group>"; };
 		BEC7A99F1CC7E1A700454B3A /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
 		BEC7A9A01CC7E1A700454B3A /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
 		BEC7A9A11CC7E1A700454B3A /* SLKTextInput+Implementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextInput+Implementation.m"; sourceTree = "<group>"; };
@@ -129,7 +158,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7F67EC1CCFAA2B006F8C43 /* Realm.framework in Frameworks */,
 				3CE5BDC8BEE87195E73E32FE /* Pods_inMacChat.framework in Frameworks */,
+				BE7F67EE1CCFAA2B006F8C43 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +179,8 @@
 		B4FD9B524FE051EF3661CE8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE7F67EA1CCFAA2B006F8C43 /* Realm.framework */,
+				BE7F67EB1CCFAA2B006F8C43 /* RealmSwift.framework */,
 				BEC7A9BF1CC7E1B500454B3A /* SocketIO */,
 				BEC7A99E1CC7E1A700454B3A /* SlackTextViewController */,
 				BE2D3C4C1CC54290002DEB94 /* FloatLabel */,
@@ -169,7 +202,7 @@
 		BE2D3BEE1CC5396C002DEB94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE2D3BED1CC5396C002DEB94 /* MacRu.Chat.app */,
+				BE2D3BED1CC5396C002DEB94 /* inMacChat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA5FC311CC96EF500A52D34 /* noavatar.png */,
+				BEAE26701CCFDA29008848C4 /* mark.png */,
 				BE99314B1CC77DEC009F26EB /* Controllers */,
 				BE99314C1CC77DF0009F26EB /* Models */,
 				BE2D3BF01CC5396C002DEB94 /* AppDelegate.swift */,
@@ -198,12 +232,21 @@
 			name = FloatLabel;
 			sourceTree = "<group>";
 		};
+		BE7F67F31CCFAC82006F8C43 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				BE7F67F41CCFAC9C006F8C43 /* ChatModel.swift */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
 		BE99314B1CC77DEC009F26EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BE2D3BF21CC5396C002DEB94 /* NickNameViewController.swift */,
 				BE33A59F1CC629A300917037 /* CodeValidationViewController.swift */,
 				BE30DBA91CC7D718002B891B /* NewChatViewController.swift */,
+				BEAE26681CCFCE5E008848C4 /* ArchiveChatViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +254,10 @@
 		BE99314C1CC77DF0009F26EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE266A1CCFD1C5008848C4 /* ArchiveCell.swift */,
+				BEEB64951CC9520900621B90 /* ChatCell.swift */,
+				BED0DCA01CCE2CA500051EA5 /* AutoCompletionCell.swift */,
+				BE7F67F31CCFAC82006F8C43 /* DB */,
 				BEEB64941CC951F500621B90 /* JSONmodels */,
 				BE9931491CC76D18009F26EB /* KeyChain.swift */,
 				BE9931631CC796CD009F26EB /* PASImageView.swift */,
@@ -291,8 +338,6 @@
 			children = (
 				BE338FC51CC9395A00954B38 /* User.swift */,
 				BE338FC41CC9395A00954B38 /* Message.swift */,
-				BEEB64951CC9520900621B90 /* ChatCell.swift */,
-				BED0DCA01CCE2CA500051EA5 /* AutoCompletionCell.swift */,
 			);
 			name = JSONmodels;
 			sourceTree = "<group>";
@@ -310,6 +355,8 @@
 				BE2D3BEB1CC5396C002DEB94 /* Resources */,
 				BF1E7CEA88025EF9D09571B2 /* 📦 Embed Pods Frameworks */,
 				234E9398E5FEBCB122A36AEE /* 📦 Copy Pods Resources */,
+				BE7F67F01CCFAA2B006F8C43 /* Embed Frameworks */,
+				BE7F67F21CCFAA98006F8C43 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,7 +364,7 @@
 			);
 			name = inMacChat;
 			productName = inMacChat;
-			productReference = BE2D3BED1CC5396C002DEB94 /* MacRu.Chat.app */;
+			productReference = BE2D3BED1CC5396C002DEB94 /* inMacChat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -369,6 +416,7 @@
 			files = (
 				BE2D3BFB1CC5396C002DEB94 /* LaunchScreen.storyboard in Resources */,
 				BE2D3BF81CC5396C002DEB94 /* Assets.xcassets in Resources */,
+				BEAE26711CCFDA29008848C4 /* mark.png in Resources */,
 				BE2D3BF61CC5396C002DEB94 /* Main.storyboard in Resources */,
 				BEA5FC321CC96EF500A52D34 /* noavatar.png in Resources */,
 			);
@@ -406,6 +454,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inMacChat/Pods-inMacChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BE7F67F21CCFAA98006F8C43 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
 		};
 		BF1E7CEA88025EF9D09571B2 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -452,10 +513,12 @@
 				BEC7A9D61CC7E1B500454B3A /* SocketEngine.swift in Sources */,
 				BE33A5A01CC629A300917037 /* CodeValidationViewController.swift in Sources */,
 				BEC7A9D71CC7E1B500454B3A /* SocketEngineClient.swift in Sources */,
+				BEAE266B1CCFD1C5008848C4 /* ArchiveCell.swift in Sources */,
 				BEC7A9E21CC7E1B500454B3A /* SocketStringReader.swift in Sources */,
 				BEC7A9B61CC7E1A700454B3A /* SLKTextInput+Implementation.m in Sources */,
 				BE338FC61CC9395A00954B38 /* Message.swift in Sources */,
 				BEC7A9D41CC7E1B500454B3A /* SocketAckManager.swift in Sources */,
+				BEAE26691CCFCE5E008848C4 /* ArchiveChatViewController.swift in Sources */,
 				BEC7A9D81CC7E1B500454B3A /* SocketEnginePacketType.swift in Sources */,
 				BEC7A9D51CC7E1B500454B3A /* SocketAnyEvent.swift in Sources */,
 				BE5A33A21CC9835800AA18EB /* TextFormatter.swift in Sources */,
@@ -464,6 +527,7 @@
 				BE2D3BF11CC5396C002DEB94 /* AppDelegate.swift in Sources */,
 				BE99314A1CC76D18009F26EB /* KeyChain.swift in Sources */,
 				BE9931641CC796CD009F26EB /* PASImageView.swift in Sources */,
+				BE7F67F51CCFAC9C006F8C43 /* ChatModel.swift in Sources */,
 				BEEB64961CC9520900621B90 /* ChatCell.swift in Sources */,
 				BEC7A9DD1CC7E1B500454B3A /* SocketIOClientOption.swift in Sources */,
 				BEC7A9BA1CC7E1A700454B3A /* SLKTextViewController.m in Sources */,
@@ -514,7 +578,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gleb Karpushkin (JJ5D57T553)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -560,7 +624,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gleb Karpushkin (QHQL7836SK)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -588,14 +652,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = inMacChat/inMacChat.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gleb Karpushkin (JJ5D57T553)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gleb Karpushkin (JJ5D57T553)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/inMacChat",
+				);
 				INFOPLIST_FILE = inMacChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
-				PRODUCT_NAME = MacRu.Chat;
-				PROVISIONING_PROFILE = "2801848a-1d90-4227-8291-80148e222239";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3224fa2c-e247-4879-b032-3a7a00cc02e6";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -608,14 +676,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = inMacChat/inMacChat.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gleb Karpushkin (QHQL7836SK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gleb Karpushkin (QHQL7836SK)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/inMacChat",
+				);
 				INFOPLIST_FILE = inMacChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.inMacChat;
-				PRODUCT_NAME = MacRu.Chat;
-				PROVISIONING_PROFILE = "c38483d7-235a-458c-a503-be68b5c52a90";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3ee38d6b-7954-4387-935b-8060774dd829";
 				SWIFT_OBJC_BRIDGING_HEADER = "inMacChat-Bridging-Header.h";
 			};
 			name = Release;

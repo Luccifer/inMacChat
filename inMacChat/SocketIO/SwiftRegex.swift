@@ -176,10 +176,10 @@ func ~= (left: SwiftRegex, right: String) -> String {
 }
 
 func ~= (left: SwiftRegex, right: [String]) -> String {
-    var matchNumber = 0
+    let matchNumber = 0
     return left.substituteMatches({match, stop -> String in
         
-        if ++matchNumber == right.count {
+        if matchNumber + 1 == right.count {
             stop.memory = true
         }
         

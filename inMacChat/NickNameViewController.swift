@@ -16,8 +16,6 @@ import EZSwiftExtensions
 
 class NickNameViewController: UIViewController, CoachMarksControllerDelegate, CoachMarksControllerDataSource {
 
-    let socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
-
     let coachMarksController = CoachMarksController()
     let skipView = CoachMarkSkipDefaultView()
     let pointOfInterest = UIView()
@@ -38,24 +36,26 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
         if KeyChain().token().isEmpty == false {
             pushVC(ChatViewController())
         }
-        self.socket.connect()
+        socket.connect()
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.checkFirstResponder), userInfo: nil, repeats: true)
 
-        if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed1") == nil {
-            self.coachMarksController.startOn(self)
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed1")
-        } else {
-            if NSUserDefaults.standardUserDefaults().boolForKey("tutorShowed1") == false {
+        if KeyChain().token().characters.count < 2 {
+            if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed1") == nil {
                 self.coachMarksController.startOn(self)
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed1")
-
             } else {
+                if NSUserDefaults.standardUserDefaults().boolForKey("tutorShowed1") == false {
+                    self.coachMarksController.startOn(self)
+                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed1")
 
+                } else {
+
+                }
             }
         }
     }
     override func viewDidDisappear(animated: Bool) {
-        self.socket.disconnect()
+        socket.disconnect()
     }
 
     func UI() {
@@ -144,7 +144,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
         } else {
             SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
             SwiftSpinner.show("Connecting to inMac")
-            self.socket.emitWithAck("app_verification", ["method": "requestCode", "username": self.nickFiled.text!, "uid": uuid, "appid": appid
+            socket.emitWithAck("app_verification", ["method": "requestCode", "username": self.nickFiled.text!, "uid": uuid, "appid": appid
                 ])(timeoutAfter: 10) { data in
 
                     print("REQUEST CODE:\(data)")
@@ -171,7 +171,7 @@ class NickNameViewController: UIViewController, CoachMarksControllerDelegate, Co
                             dispatch_after(delayTime, dispatch_get_main_queue()) {
                                 self.performSegueWithIdentifier("toCodeValidation", sender: nil)
                             }
-                            self.socket.disconnect()
+                            socket.disconnect()
                         } else {
                             let message = json["message"].stringValue
                             if message == "USER_NOT_FOUND" {

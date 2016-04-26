@@ -10,38 +10,39 @@ import Foundation
 import KeychainAccess
 
 public var uuid = NSUUID().UUIDString
+public var socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
 public var appid = ""
 public var userid: Int?
 
 struct KeyChain {
-
+    
     //Save
     func saveUsername(username: String) {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["username"] = username
     }
-
+    
     func savePassword(password: String) {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["password"] = password
     }
-
+    
     func saveToken(token: String) {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["token"] = token
     }
-
+    
     func saveUUID(UUID: String) {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["UUID"] = UUID
     }
-
+    
     func saveUserID(userID: String) {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["userID"] = userID
     }
-
-
+    
+    
     // Load
     func username() -> String {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
@@ -51,7 +52,7 @@ struct KeyChain {
             return String()
         }
     }
-
+    
     func password() -> String {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         if keychain["password"] != nil {
@@ -60,7 +61,7 @@ struct KeyChain {
             return String()
         }
     }
-
+    
     func UUID() -> String {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         if keychain["UUID"] != nil {
@@ -69,7 +70,7 @@ struct KeyChain {
             return String()
         }
     }
-
+    
     func token() -> String {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         if keychain["token"] != nil {
@@ -78,7 +79,7 @@ struct KeyChain {
             return String()
         }
     }
-
+    
     func userID() -> String {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         if keychain["userID"] != nil {
@@ -87,7 +88,7 @@ struct KeyChain {
             return String()
         }
     }
-
+    
     func logout() {
         let keychain = Keychain(service: "com.eyerise.inMacChat")
         keychain["username"] = nil
@@ -95,6 +96,6 @@ struct KeyChain {
         keychain["UUID"] = nil
         keychain["token"] = nil
         keychain["userID"] = nil
-
+        
     }
 }

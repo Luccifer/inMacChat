@@ -19,7 +19,7 @@ public var imageURL = NSURL()
 
 class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, CoachMarksControllerDelegate, CoachMarksControllerDataSource {
 
-    let socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
+//    let socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
 
     let coachMarksController = CoachMarksController()
     let skipView = CoachMarkSkipDefaultView()
@@ -34,11 +34,13 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if KeyChain().username() == "AppleTest" {
-            self.codeFiled.text = "12345"
-            self.verify_code()
+        if dev == true {
+            if KeyChain().username() == "AppleTest" {
+                self.codeFiled.text = "12345"
+                self.verify_code()
+            }
         }
-
+        
         self.avatarView.imageURL(imageURL)
 
         let keyboard = MMNumberKeyboard()
@@ -53,7 +55,7 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.socket.connect()
+        socket.connect()
         if NSUserDefaults.standardUserDefaults().objectForKey("tutorShowed") == nil {
             self.coachMarksController.startOn(self)
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "tutorShowed")
@@ -262,17 +264,24 @@ class CodeValidationViewController: UIViewController, MMNumberKeyboardDelegate, 
                             self.performSegueWithIdentifier("toChat1", sender: nil)
                         }
 
-                        self.socket.disconnect()
+                        socket.disconnect()
                     } else {
-                        KeyChain()
                         print(" code_verification unsuccessful ")
-
+                        
+                        if let message = json["message"].string {
+                            if message == "INVALID_CODE"{
+                                print(message)
+                                SwiftSpinner.showWithDuration(2.0, title: "Code invalid", animated: false)
+                            }
+                        }
+                        
                         if let reason = json["reason"].string {
                             print("reason is \(reason) ")
 
                             if reason == "INVALID_TOKEN" {
-                                SwiftSpinner.showWithDelay(2.0, title: "\(reason)", animated:false)
+                                SwiftSpinner.showWithDuration(2.0, title: "\(reason)", animated:false)
                             }
+                            
                         }
                     }
                 }
