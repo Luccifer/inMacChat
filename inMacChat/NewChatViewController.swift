@@ -34,10 +34,15 @@ class ChatViewController: SLKTextViewController, UINavigationBarDelegate {
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        socket.disconnect()
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
+        self.navigationController?.interactivePopGestureRecognizer!.enabled = false
         self.navigationController?.navigationBar.hidden = true
+        self.messages.removeAll()
         socket.connect()
         socket.on("connect") {data, ack in
             print("socket connected")
