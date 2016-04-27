@@ -13,7 +13,6 @@ public var uuid = NSUUID().UUIDString
 public var socket = SocketIOClient(socketURL: "https://inmac.org/chat/socket.io/")
 public var appid = ""
 public var userid: Int?
-
 struct KeyChain {
     
     //Save
